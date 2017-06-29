@@ -9,7 +9,7 @@
 		<param-value>
 			classpath:spring-mvc.xml
 			classpath:spring-jdbc.xml
-			classpath*:renren-*.xml
+			classpath*:wind-*.xml
 		</param-value>
 	</context-param>
 	

@@ -1,6 +1,6 @@
 **项目说明** 
-- renren-security是一个轻量级权限管理系统，其核心设计目标是开发迅速、学习简单、轻量级、易扩展
-- 使用renren-security搭建项目，只需编写30%左右代码，其余的代码交给系统自动生成
+- manager是一个轻量级权限管理系统，其核心设计目标是开发迅速、学习简单、轻量级、易扩展
+- 使用manager搭建项目，只需编写30%左右代码，其余的代码交给系统自动生成
 - 一个月的工作量，一周就能完成，剩余的时间可以陪家人、朋友、撩妹、钓凯子等，从此踏入高富帅、白富美行业
 - 也是接私活的利器，能快速完成项目并交付，轻松赚取外快，实现财务自由，走向人生巅峰（接私活赚了钱，可以给作者打赏点辛苦费，让作者更有动力持续优化、完善）
  
@@ -22,27 +22,27 @@
 
 **项目结构** 
 ```
-renren-security
+manager
 ├─doc  项目SQL语句
-├─renren-common 公共模块
+├─common 公共模块
 │  ├─annotation 公共注解
 │  ├─oss 云存储服务
 │  ├─validator 后台校验
 │  └─db.properties 数据库配置文件
 │ 
-├─renren-api API模块（接口开发）
+├─api API模块（接口开发）
 │ 
-├─renren-gen 代码生成器模块
+├─gen 代码生成器模块
 │  ├─template 代码生成器模板（可增加或修改相应模板）
 │  └─generator.properties 配置文件（配置包名、类型转换等）
 │ 
-├─renren-schedule 定时任务模块
+├─schedule 定时任务模块
 │
-├─renren-shiro 权限模块
+├─shiro 权限模块
 │ 
-├─renren-shiro-dept 部门权限模块（待开发）
+├─shiro-dept 部门权限模块（待开发）
 │ 
-├──renren-web 管理后台模块
+├──web 管理后台模块
 │  ├─js 系统业务js代码
 │  ├─statics 第三方库、插件等静态资源
 │  ├─index.html AdminLTE主题风格（默认主题）
@@ -56,7 +56,6 @@ renren-security
 - 开发文档：http://www.renren.io/open/doc.html
 - oschina仓库：http://git.oschina.net/babaio/renren-security
 - github仓库：https://github.com/sunlightcs/renren-security
-- [编程入门教程](http://www.renren.io)：http://www.renren.io   
 - 官方QQ群：324780204、145799952
 - 如需关注项目最新动态，请Watch、Star项目，同时也是对项目最好的支持
 - 技术讨论、二次开发等咨询、问题和建议，请移步到QQ群324780204、145799952，我会在第一时间进行解答和回复！
@@ -100,16 +99,12 @@ renren-security
 
  **本地部署**
 - 通过git下载源码
-- 创建数据库renren-security，数据库编码为UTF-8
+- 创建数据库manager，数据库编码为UTF-8
 - 执行doc/db.sql文件，初始化数据【按需导入表结构及数据】
 - 修改db.properties文件，更新MySQL账号和密码
 - Eclipse、IDEA执行【clean package tomcat7:run】命令，即可运行项目
 - 项目访问路径：http://localhost
-- 非Maven方式启动，则默认访问路径为：http://localhost:8080/renren-security
+- 非Maven方式启动，则默认访问路径为：http://localhost:8080/manager
 - 账号密码：admin/admin
 
-
-**项目打赏** 
-
-如果您觉得作者的权限系统能帮助到您，您可以打赏作者一瓶汽水
-![输入图片说明](http://cdn.renren.io/img/10e0f63b327d4e7ab9113e7b9568381a "在这里输入图片标题")
+输入图片说明](http://cdn.renren.io/img/10e0f63b327d4e7ab9113e7b9568381a "在这里输入图片标题")
