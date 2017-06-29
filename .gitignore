@@ -10,21 +10,14 @@
 /eclipse
 
 # idea support files
-/.idea/
-/.renren-security.iml
-/.renren-security/renren-api.iml
-/.renren-security/renren-common.iml
-/.renren-security/renren-gen.iml
-/.renren-security/renren-schedule.iml
-/.renren-security/renren-shiro.iml
-/.renren-security/renren-web.iml
+#/idea/
+
 
 # logs
 
 # build
-/.renren-api/target/
-/.renren-common/target/
-/.renren-api/target/
-/.renren-api/target/
-/.renren-api/target/
-/.renren-api/target/
+/api/target/
+/common/target/
+/gen/target/
+/shiro/target/
+/web/target/

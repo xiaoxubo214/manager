@@ -4,7 +4,7 @@
 		<artifactId>manager</artifactId>
 		<version>${wind-version}</version>
 	</parent>
-	<modelVersion>2.1.0</modelVersion>
+	<modelVersion>4.0.0</modelVersion>
 	<artifactId>shiro</artifactId>
 	<packaging>jar</packaging>
     <description>权限模块</description>
@@ -13,7 +13,7 @@
 		<dependency>
 			<groupId>com.wind</groupId>
 			<artifactId>common</artifactId>
-			<version>2.1.0</version>
+			<version>${wind-version}</version>
 		</dependency>
 	</dependencies>
 

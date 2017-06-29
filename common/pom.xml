@@ -4,7 +4,7 @@
 	  <artifactId>manager</artifactId>
 	  <version>${wind-version}</version>
 	</parent>
-	<modelVersion>2.1.0</modelVersion>
+	<modelVersion>4.0.0</modelVersion>
 	<artifactId>common</artifactId>
 	<packaging>jar</packaging>
     <description>公共模块</description>
