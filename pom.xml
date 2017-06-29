@@ -1,22 +1,22 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>io.renren</groupId>
-	<artifactId>renren-security</artifactId>
-	<version>${renren-version}</version>
+	<groupId>com.wind</groupId>
+	<artifactId>manager</artifactId>
+	<version>${wind-version}</version>
 	<packaging>pom</packaging>
-	<description>renren-security</description>
+	<description>manager</description>
 
 	<modules>
-		<module>renren-common</module> <!-- 公共模块 -->
-		<module>renren-shiro</module> <!-- 权限系统模块 -->
-		<module>renren-schedule</module> <!-- 定时任务模块 -->
-		<module>renren-gen</module> <!-- 代码生成器模块 -->
-		<module>renren-api</module> <!-- API模块 -->
-		<module>renren-web</module> <!-- 管理后台模块 -->
+		<module>common</module> <!-- 公共模块 -->
+		<module>shiro</module> <!-- 权限系统模块 -->
+		<module>schedule</module> <!-- 定时任务模块 -->
+		<module>gen</module> <!-- 代码生成器模块 -->
+		<module>api</module> <!-- API模块 -->
+		<module>web</module> <!-- 管理后台模块 -->
 	</modules>
 
 	<properties>
-		<renren-version>2.1.0</renren-version>
+		<wind-version>2.1.0</wind-version>
 		<java-version>1.7</java-version>
 		<servlet-version>3.1.0</servlet-version>
 		<junit-version>4.12</junit-version>
