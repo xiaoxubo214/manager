@@ -84,6 +84,47 @@ CREATE TABLE `sys_oss` (
   PRIMARY KEY (`id`)
 ) ENGINE=`InnoDB` DEFAULT CHARACTER SET utf8 COMMENT='文件上传';
 
+CREATE TABLE `work_project` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `name` varchar(200) COMMENT '项目名称',
+   `owner_id` bigint(20) COMMENT 'Owner id',
+  `owner` varchar(200) COMMENT '负责人',
+  PRIMARY KEY (`id`)
+) ENGINE=`InnoDB` DEFAULT CHARACTER SET utf8 COMMENT='项目';
+
+CREATE TABLE `work_group` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `name` varchar(200) COMMENT '组名称',
+  PRIMARY KEY (`id`)
+) ENGINE=`InnoDB` DEFAULT CHARACTER SET utf8 COMMENT='组名称';
+
+CREATE TABLE `work_standard` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `name` varchar(200) COMMENT '指标',
+	`group_id` bigint(20) COMMENT 'group id',
+  `item_score` bigint(20) COMMENT '指标分数',
+  PRIMARY KEY (`id`)
+) ENGINE=`InnoDB` DEFAULT CHARACTER SET utf8 COMMENT='项目';
+
+CREATE TABLE `work_achievement` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `project_name` varchar(200) COMMENT '项目名称',
+	`user_id` bigint(20) COMMENT 'user id',
+    `owner_id` bigint(20) COMMENT 'owner id',
+  `start_time` bigint(20) COMMENT '开始时间',
+  `end_time` bigint(20) COMMENT '开始时间',
+  PRIMARY KEY (`id`)
+) ENGINE=`InnoDB` DEFAULT CHARACTER SET utf8 COMMENT='项目绩效';
+
+CREATE TABLE `work_achievement_item` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+	`achievement_id` bigint(20) COMMENT 'achievement id',
+    `work_standard_id` bigint(20) COMMENT 'owner id',
+  `work_standard_name` bigint(20) COMMENT '开始时间',
+  PRIMARY KEY (`id`)
+) ENGINE=`InnoDB` DEFAULT CHARACTER SET utf8 COMMENT='项目绩效';
+
+
 
 -- 初始数据
 INSERT INTO `sys_user` (`user_id`, `username`, `password`, `email`, `mobile`, `status`, `create_user_id`, `create_time`) VALUES ('1', 'admin', '8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918', 'root@163.com', '13612345678', '1', '1', '2016-11-11 11:11:11');
@@ -108,7 +149,8 @@ INSERT INTO `sys_menu` (`menu_id`, `parent_id`, `name`, `url`, `perms`, `type`, 
 INSERT INTO `sys_menu` (`menu_id`, `parent_id`, `name`, `url`, `perms`, `type`, `icon`, `order_num`) VALUES ('29', '1', '系统日志', 'sys/log.html', 'sys:log:list', '1', 'fa fa-file-text-o', '7');
 INSERT INTO `sys_menu` (`menu_id`, `parent_id`, `name`, `url`, `perms`, `type`, `icon`, `order_num`) VALUES ('30', '1', '文件上传', 'sys/oss.html', 'sys:oss:all', '1', 'fa fa-file-image-o', '6');
 
-INSERT INTO `sys_menu` (`menu_id`, `parent_id`, `name`, `url`, `perms`, `type`, `icon`, `order_num`) VALUES ('31', '0', '订单管理', NULL, NULL, '0', 'fa fa-cog', '0');
+INSERT INTO `sys_menu` (`menu_id`, `parent_id`, `name`, `url`, `perms`, `type`, `icon`, `order_num`) VALUES ('31', '0', '工作评估', NULL, NULL, '0', 'fa fa-cog', '0');
+INSERT INTO `sys_menu` (`menu_id`, `parent_id`, `name`, `url`, `perms`, `type`, `icon`, `order_num`) VALUES ('32', '31', '管理员列表', 'sys/user.html', NULL, '1', 'fa fa-user', '1');
 
 
 INSERT INTO `sys_config` (`key`, `value`, `status`, `remark`) VALUES ('CLOUD_STORAGE_CONFIG_KEY', '{\"aliyunAccessKeyId\":\"\",\"aliyunAccessKeySecret\":\"\",\"aliyunBucketName\":\"\",\"aliyunDomain\":\"\",\"aliyunEndPoint\":\"\",\"aliyunPrefix\":\"\",\"qcloudBucketName\":\"\",\"qcloudDomain\":\"\",\"qcloudPrefix\":\"\",\"qcloudSecretId\":\"\",\"qcloudSecretKey\":\"\",\"qiniuAccessKey\":\"NrgMfABZxWLo5B-YYSjoE8-AZ1EISdi1Z3ubLOeZ\",\"qiniuBucketName\":\"ios-app\",\"qiniuDomain\":\"http://7xqbwh.dl1.z0.glb.clouddn.com\",\"qiniuPrefix\":\"upload\",\"qiniuSecretKey\":\"uIwJHevMRWU0VLxFvgy0tAcOdGqasdtVlJkdy6vV\",\"type\":1}', '0', '云存储配置信息');
