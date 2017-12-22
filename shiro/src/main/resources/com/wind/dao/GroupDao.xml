@@ -3,66 +3,40 @@
 
 <mapper namespace="com.wind.dao.GroupDao">
 
-	<select id="queryObject" resultType="com.wind.entity.GroupEntity">
-		select * from work_group where group_id = #{value}
-	</select>
-
 	<select id="queryList" resultType="com.wind.entity.GroupEntity">
 		select * from work_group
 		<where>
 			<if test="groupName != null and groupName.trim() != ''">
-				and `group_name` like concat('%',#{groupName},'%')
-			</if>
-			<if test="createUserId != null">
-				and create_user_id = #{createUserId}
+				and `name` like concat('%',#{groupName},'%')
 			</if>
 		</where>
-		<choose>
-			<when test="sidx != null and sidx.trim() != ''">
-				order by ${sidx} ${order}
-			</when>
-			<otherwise>
-				order by role_id asc
-			</otherwise>
-		</choose>
 		<if test="offset != null and limit != null">
 			limit #{offset}, #{limit}
 		</if>
 	</select>
 
 	<select id="queryTotal" resultType="int">
-		select count(*) from sys_role
+		select count(*) from work_group
 		<where>
-			<if test="roleName != null and roleName.trim() != ''">
-				and `role_name` like concat('%',#{roleName},'%')
-			</if>
-			<if test="createUserId != null">
-				and create_user_id = #{createUserId}
+			<if test="groupName != null and groupName.trim() != ''">
+				and `name` like concat('%',#{groupName},'%')
 			</if>
 		</where>
 	</select>
 
-	<insert id="save" parameterType="com.wind.entity.SysRoleEntity" useGeneratedKeys="true" keyProperty="roleId">
-		insert into sys_role
+	<insert id="save" parameterType="com.wind.entity.GroupEntity">
+		insert into work_group
 		(
-		`role_id`,
-		`role_name`,
-		`remark`,
-		`create_user_id`,
-		`create_time`
+		`name`
 		)
 		values
 		(
-		#{roleId},
-		#{roleName},
-		#{remark},
-		#{createUserId},
-		#{createTime}
+		#{groupName}
 		)
 	</insert>
 
-	<update id="update" parameterType="com.wind.entity.SysRoleEntity">
-		update sys_role
+	<update id="update" parameterType="com.wind.entity.GroupEntity">
+		update work_group
 		<set>
 			<if test="roleName != null">`role_name` = #{roleName}, </if>
 			<if test="remark != null">`remark` = #{remark}</if>
