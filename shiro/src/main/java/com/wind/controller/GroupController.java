@@ -67,6 +67,7 @@ public class GroupController extends AbstractController {
     @RequestMapping("/save")
     @RequiresPermissions("sys:user:save")
     public R save(@RequestBody GroupEntity groupEntity){
+        System.out.println(groupEntity.getGroupId() + groupEntity.getGroupName());
         ValidatorUtils.validateEntity(groupEntity, GroupEntity.class);
 
         //g.setCreateUserId(getUserId());
