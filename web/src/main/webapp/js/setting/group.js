@@ -1,6 +1,6 @@
 $(function () {
     $("#jqGrid").jqGrid({
-        url: '../sys/group/list',
+        url: '../setting/group/list',
         datatype: "json",
         colModel: [
             { label: '组ID', name: 'groupId', index: "id", width: 45, key: true },
@@ -55,7 +55,7 @@ var vm = new Vue({
 			vm.showList = false;
 			vm.title = "新增";
 			vm.groupList = {};
-			vm.group = {groupName:};
+            vm.group = {};
 			
 			//获取角色信息
 			this.getGroupList();
@@ -82,7 +82,7 @@ var vm = new Vue({
 			confirm('确定要删除选中的记录？', function(){
 				$.ajax({
 					type: "POST",
-				    url: "../sys/group/delete",
+				    url: "../setting/group/delete",
                     contentType: "application/json",
 				    data: JSON.stringify(userIds),
 				    success: function(r){
@@ -98,7 +98,8 @@ var vm = new Vue({
 			});
 		},
 		saveOrUpdate: function (event) {
-			var url = vm.group.groupId == null ? "../sys/group/save" : "../sys/group/update";
+			var url = vm.group.groupId == null ? "../setting/group/save" : "../setting/group/update";
+            alert(JSON.stringify(vm.group));
 			$.ajax({
 				type: "POST",
 			    url: url,
@@ -106,9 +107,9 @@ var vm = new Vue({
 			    data: JSON.stringify(vm.group),
 			    success: function(r){
 			    	if(r.code === 0){
-						alert('操作成功', function(index){
+/*						alert('操作成功', function(index){
 							vm.reload();
-						});
+						});*/
 					}else{
 						alert(r.msg);
 					}
@@ -116,12 +117,12 @@ var vm = new Vue({
 			});
 		},
 		getGroup: function(groupId){
-			$.get("../sys/group/info/"+groupId, function(r){
-				vm.user = r.user;
+			$.get("../setting/group/info/"+groupId, function(r){
+				vm.group = r.group;
 			});
 		},
 		getGroupList: function(){
-			$.get("../sys/group/select", function(r){
+			$.get("../setting/group/select", function(r){
 				vm.groupList = r.list;
 			});
 		},

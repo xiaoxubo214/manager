@@ -24,7 +24,7 @@ import java.util.Map;
 
 
 @RestController
-@RequestMapping("/sys/group")
+@RequestMapping("/setting/group")
 public class GroupController extends AbstractController {
     @Autowired
     private GroupService groupService;
@@ -32,7 +32,7 @@ public class GroupController extends AbstractController {
      * 所有组列表
      */
     @RequestMapping("/list")
-    @RequiresPermissions("sys:user:list")
+    @RequiresPermissions("setting:group:list")
     public R list(@RequestParam Map<String, Object> params){
         //只有超级管理员，才能查看所有管理员列表
         if(getUserId() != Constant.SUPER_ADMIN){
@@ -65,7 +65,7 @@ public class GroupController extends AbstractController {
      */
     @SysLog("保存组")
     @RequestMapping("/save")
-    @RequiresPermissions("sys:user:save")
+    @RequiresPermissions("setting:group:save")
     public R save(@RequestBody GroupEntity groupEntity){
         System.out.println(groupEntity.getGroupId() + groupEntity.getGroupName());
         ValidatorUtils.validateEntity(groupEntity, GroupEntity.class);
@@ -81,7 +81,7 @@ public class GroupController extends AbstractController {
      */
     @SysLog("修改组")
     @RequestMapping("/update")
-    @RequiresPermissions("sys:user:update")
+    @RequiresPermissions("setting:group:update")
     public R update(@RequestBody GroupEntity groupEntity){
         ValidatorUtils.validateEntity(groupEntity, GroupEntity.class);
 
@@ -96,7 +96,7 @@ public class GroupController extends AbstractController {
      */
     @SysLog("删除组")
     @RequestMapping("/delete")
-    @RequiresPermissions("sys:user:delete")
+    @RequiresPermissions("setting:group:delete")
     public R delete(@RequestBody Long[] userIds){
         if(ArrayUtils.contains(userIds, 1L)){
             return R.error("不能删除");

@@ -31,7 +31,7 @@
 		)
 		values
 		(
-		#{groupName}
+		#{name}
 		)
 	</insert>
 

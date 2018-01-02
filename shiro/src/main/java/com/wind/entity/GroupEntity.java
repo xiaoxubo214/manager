@@ -9,7 +9,7 @@ public class GroupEntity implements Serializable {
     //用户ID
     private Long groupId;
     //用户名
-    private String groupName;
+    private String name;
 
     public Long getGroupId() {
         return groupId;
@@ -20,10 +20,10 @@ public class GroupEntity implements Serializable {
     }
 
     public String getGroupName() {
-        return groupName;
+        return name;
     }
 
-    public void setGroupName(String groupName) {
-        this.groupName = groupName;
+    public void setGroupName(String name) {
+        this.name = name;
     }
 }
