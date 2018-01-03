@@ -2,7 +2,9 @@ package com.wind.controller;
 
 import com.wind.annotation.SysLog;
 import com.wind.entity.GroupEntity;
+import com.wind.entity.ProjectEntity;
 import com.wind.service.GroupService;
+import com.wind.service.ProjectService;
 import com.wind.utils.Constant;
 import com.wind.utils.PageUtils;
 import com.wind.utils.Query;
@@ -24,7 +26,7 @@ import java.util.Map;
 @RequestMapping("/setting/project")
 public class ProjectController extends AbstractController {
     @Autowired
-    private GroupService groupService;
+    private ProjectService projectService;
     /**
      * 所有组列表
      */
@@ -38,8 +40,8 @@ public class ProjectController extends AbstractController {
 
         //查询列表数据
         Query query = new Query(params);
-        List<GroupEntity> groupList = groupService.queryList(query);
-        int total = groupService.queryTotal(query);
+        List<ProjectEntity> groupList = projectService.queryList(query);
+        int total = projectService.queryTotal(query);
 
         PageUtils pageUtil = new PageUtils(groupList, total, query.getLimit(), query.getPage());
 
@@ -60,14 +62,14 @@ public class ProjectController extends AbstractController {
     /**
      * 保存用户
      */
-    @SysLog("保存组")
+    @SysLog("新建项目")
     @RequestMapping("/save")
     @RequiresPermissions("setting:project:save")
-    public R save(@RequestBody GroupEntity groupEntity){
-        ValidatorUtils.validateEntity(groupEntity, GroupEntity.class);
+    public R save(@RequestBody ProjectEntity projectEntity){
+        ValidatorUtils.validateEntity(projectEntity, ProjectEntity.class);
 
         //g.setCreateUserId(getUserId());
-        groupService.save(groupEntity);
+        projectService.save(projectEntity);
 
         return R.ok();
     }
@@ -78,11 +80,11 @@ public class ProjectController extends AbstractController {
     @SysLog("修改项目")
     @RequestMapping("/update")
     @RequiresPermissions("setting:project:update")
-    public R update(@RequestBody GroupEntity groupEntity){
-        ValidatorUtils.validateEntity(groupEntity, GroupEntity.class);
+    public R update(@RequestBody ProjectEntity projectEntity){
+        ValidatorUtils.validateEntity(projectEntity, ProjectEntity.class);
 
         //user.setCreateUserId(getUserId());
-        groupService.update(groupEntity);
+        projectService.update(projectEntity);
 
         return R.ok();
     }
@@ -90,19 +92,19 @@ public class ProjectController extends AbstractController {
     /**
      * 删除组
      */
-    @SysLog("删除组")
+    @SysLog("删除项目")
     @RequestMapping("/delete")
     @RequiresPermissions("setting:project:delete")
-    public R delete(@RequestBody Long[] userIds){
-        if(ArrayUtils.contains(userIds, 1L)){
+    public R delete(@RequestBody Long[] projectIds){
+        if(ArrayUtils.contains(projectIds, 1L)){
             return R.error("不能删除");
         }
 
-        if(ArrayUtils.contains(userIds, getUserId())){
+/*        if(ArrayUtils.contains(userIds, getUserId())){
             return R.error("不能删除");
-        }
+        }*/
 
-        groupService.deleteBatch(userIds);
+        projectService.deleteBatch(projectIds);
 
         return R.ok();
     }

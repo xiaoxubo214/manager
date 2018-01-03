@@ -1,5 +1,6 @@
 package com.wind.controller;
 
+import com.wind.annotation.SysLog;
 import com.wind.utils.R;
 import com.wind.utils.ShiroUtils;
 

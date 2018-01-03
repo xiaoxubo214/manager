@@ -2,7 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="41efad8c-4260-4151-a363-2b818488b01e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shiro/src/main/resources/com/wind/dao/SysUserDao.xml" afterPath="$PROJECT_DIR$/shiro/src/main/resources/com/wind/dao/SysUserDao.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shiro/src/main/java/com/wind/service/ProjectService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shiro/src/main/java/com/wind/service/impl/ProjectServiceImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shiro/src/main/resources/com/wind/dao/projectDao.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/src/main/webapp/js/setting/newachievement.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shiro/src/main/java/com/wind/controller/ProjectController.java" afterPath="$PROJECT_DIR$/shiro/src/main/java/com/wind/controller/ProjectController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shiro/src/main/java/com/wind/controller/SysLoginController.java" afterPath="$PROJECT_DIR$/shiro/src/main/java/com/wind/controller/SysLoginController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shiro/src/main/java/com/wind/entity/ProjectEntity.java" afterPath="$PROJECT_DIR$/shiro/src/main/java/com/wind/entity/ProjectEntity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/page/setting/newachievement.html" afterPath="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/page/setting/newachievement.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/page/setting/newproject.html" afterPath="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/page/setting/newproject.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/src/main/webapp/js/setting/newproject.js" afterPath="$PROJECT_DIR$/web/src/main/webapp/js/setting/newproject.js" />
     </list>
     <ignored path="$PROJECT_DIR$/web/target/" />
     <ignored path="$PROJECT_DIR$/shiro/target/" />
@@ -32,20 +42,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="group.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/src/main/webapp/js/setting/group.js">
+      <file leaf-file-name="projectDao.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/shiro/src/main/resources/com/wind/dao/projectDao.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2204">
-              <caret line="116" column="15" lean-forward="true" selection-start-line="116" selection-start-column="15" selection-end-line="116" selection-end-column="15" />
+            <state relative-caret-position="456">
+              <caret line="24" column="13" lean-forward="true" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
               <folding>
-                <marker date="1514894135274" expanded="true" signature="2744:2763" ph="{...}" />
+                <marker date="1514951759625" expanded="true" signature="794:862" ph="insert into work_project... " />
+                <marker date="1514951759625" expanded="true" signature="945:1051" ph="update work_... " />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="user.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/src/main/webapp/js/sys/user.js">
+      <file leaf-file-name="log.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/src/main/webapp/WEB-INF/page/sys/log.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -54,26 +65,87 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="user.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/src/main/webapp/js/setting/user.js">
+      <file leaf-file-name="GroupController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/shiro/src/main/java/com/wind/controller/GroupController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="570">
-              <caret line="30" column="19" lean-forward="true" selection-start-line="30" selection-start-column="19" selection-end-line="30" selection-end-column="19" />
+            <state relative-caret-position="-760">
+              <caret line="43" column="57" lean-forward="true" selection-start-line="43" selection-start-column="57" selection-end-line="43" selection-end-column="57" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GroupDao.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/shiro/src/main/resources/com/wind/dao/GroupDao.xml">
+      <file leaf-file-name="newproject.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/src/main/webapp/WEB-INF/page/setting/newproject.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+            <state relative-caret-position="554">
+              <caret line="47" column="0" lean-forward="false" selection-start-line="47" selection-start-column="0" selection-end-line="49" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProjectController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/shiro/src/main/java/com/wind/controller/ProjectController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="163">
+              <caret line="94" column="0" lean-forward="false" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SysLoginController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/shiro/src/main/java/com/wind/controller/SysLoginController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="147">
+              <caret line="40" column="18" lean-forward="false" selection-start-line="40" selection-start-column="18" selection-end-line="40" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="newachievement.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/src/main/webapp/WEB-INF/page/setting/newachievement.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1406">
+              <caret line="74" column="7" lean-forward="true" selection-start-line="74" selection-start-column="7" selection-end-line="74" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="newachievement.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/src/main/webapp/js/setting/newachievement.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProjectEntity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/shiro/src/main/java/com/wind/entity/ProjectEntity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="684">
+              <caret line="48" column="5" lean-forward="false" selection-start-line="48" selection-start-column="5" selection-end-line="48" selection-end-column="5" />
               <folding>
-                <marker date="1514879103763" expanded="true" signature="814:880" ph="insert into work_group... " />
-                <marker date="1514879103763" expanded="true" signature="961:1142" ph="update work_... " />
-                <marker date="1514879103763" expanded="true" signature="1719:1786" ph="select role_... sys_role" />
+                <element signature="e#762#763#0" expanded="true" />
+                <element signature="e#789#790#0" expanded="true" />
+                <element signature="e#829#830#0" expanded="true" />
+                <element signature="e#861#862#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="newproject.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/src/main/webapp/js/setting/newproject.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1767">
+              <caret line="6" column="26" lean-forward="false" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="26" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -115,6 +187,8 @@
       <find>queryList</find>
       <find>userID</find>
       <find>vm</find>
+      <find>project</find>
+      <find>projectName</find>
     </findStrings>
     <dirStrings>
       <dir>renren</dir>
@@ -133,15 +207,7 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/web/src/main/webapp/js/work/user.js" />
-        <option value="$PROJECT_DIR$/api/src/main/java/com/wind/entity/GroupEntity.java" />
-        <option value="$PROJECT_DIR$/api/src/main/java/com/wind/dao/GroupDao.java" />
-        <option value="$PROJECT_DIR$/api/src/main/java/com/wind/service/GroupService.java" />
-        <option value="$PROJECT_DIR$/api/src/main/java/com/wind/service/impl/GroupServiceImpl.java" />
-        <option value="$PROJECT_DIR$/shiro/src/main/java/com/wind/service/GroupService.java" />
-        <option value="$PROJECT_DIR$/shiro/src/main/java/com/wind/service/impl/GroupServiceImpl.java" />
         <option value="$PROJECT_DIR$/shiro/src/main/java/com/wind/dao/GroupDao.java" />
-        <option value="$PROJECT_DIR$/web/src/main/webapp/login.html" />
         <option value="$PROJECT_DIR$/web/src/main/webapp/index.html" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/80e83793-58d7-4d2c-92b6-8b8928d92b94/console.sql" />
         <option value="$PROJECT_DIR$/common/src/main/resources/db.properties" />
@@ -177,13 +243,21 @@
         <option value="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/page/setting/role.html" />
         <option value="$PROJECT_DIR$/shiro/src/main/java/com/wind/entity/SysUserEntity.java" />
         <option value="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/page/setting/user.html" />
-        <option value="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/page/setting/newproject.html" />
-        <option value="$PROJECT_DIR$/shiro/src/main/java/com/wind/controller/ProjectController.java" />
         <option value="$PROJECT_DIR$/shiro/src/main/java/com/wind/entity/GroupEntity.java" />
-        <option value="$PROJECT_DIR$/shiro/src/main/java/com/wind/entity/ProjectEntity.java" />
         <option value="$PROJECT_DIR$/shiro/src/main/java/com/wind/dao/ProjectDao.java" />
         <option value="$PROJECT_DIR$/web/src/main/webapp/js/setting/user.js" />
         <option value="$PROJECT_DIR$/shiro/src/main/resources/com/wind/dao/SysUserDao.xml" />
+        <option value="$PROJECT_DIR$/shiro/src/main/java/com/wind/service/ProjectService.java" />
+        <option value="$PROJECT_DIR$/shiro/src/main/java/com/wind/service/impl/ProjectServiceImpl.java" />
+        <option value="$PROJECT_DIR$/web/src/main/webapp/js/setting/newproject.js" />
+        <option value="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/page/setting/newproject.html" />
+        <option value="$PROJECT_DIR$/shiro/src/main/java/com/wind/entity/ProjectEntity.java" />
+        <option value="$PROJECT_DIR$/shiro/src/main/resources/com/wind/dao/projectDao.xml" />
+        <option value="$PROJECT_DIR$/web/src/main/webapp/login.html" />
+        <option value="$PROJECT_DIR$/shiro/src/main/java/com/wind/controller/ProjectController.java" />
+        <option value="$PROJECT_DIR$/shiro/src/main/java/com/wind/controller/SysLoginController.java" />
+        <option value="$MAVEN_REPOSITORY$/com/github/axet/kaptcha/0.0.9/kaptcha-0.0.9.jar!/com/google/code/kaptcha/Producer.class" />
+        <option value="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/page/setting/newachievement.html" />
       </list>
     </option>
   </component>
@@ -251,7 +325,9 @@
     <option name="width" value="1096" />
     <option name="height" value="788" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
@@ -566,15 +642,17 @@
       <recent name="com.wind.dao" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.wind.service.impl" />
+      <recent name="com.wind.service" />
       <recent name="com.wind.dao" />
       <recent name="com.wind.entity" />
       <recent name="com.wind.controller" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\code\manager\web\src\main\webapp\WEB-INF\page\setting" />
       <recent name="E:\code\manager\web\src\main\webapp\js\setting" />
-      <recent name="E:\code\manager\web\src\main\webapp\WEB-INF\page\work" />
       <recent name="E:\code\manager\shiro\src\main\resources\com\wind\dao" />
+      <recent name="E:\code\manager\web\src\main\webapp\WEB-INF\page\setting" />
+      <recent name="E:\code\manager\web\src\main\webapp\WEB-INF\page\work" />
       <recent name="E:\code\manager\web\src\main\webapp\js\work" />
     </key>
   </component>
@@ -1065,12 +1143,12 @@
       <workItem from="1514016195962" duration="155000" />
       <workItem from="1514016388477" duration="2568000" />
       <workItem from="1514168763166" duration="3593000" />
-      <workItem from="1514877131514" duration="19403000" />
+      <workItem from="1514877131514" duration="26132000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="55989000" />
+    <option name="totallyTimeSpent" value="62718000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1095,7 +1173,7 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32975295" sideWeight="0.497921" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1968254" sideWeight="0.74272346" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26984128" sideWeight="0.74272346" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32919255" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
@@ -1167,157 +1245,11 @@
           <option name="timeStamp" value="12" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="13" />
+      <option name="time" value="15" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/shiro/src/main/java/com/wind/entity/SysMenuEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1663">
-          <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/shiro/src/main/java/com/wind/utils/ShiroUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding>
-            <element signature="e#604#605#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/shiro/src/main/java/com/wind/shiro/UserRealm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="35" column="13" lean-forward="false" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/shiro/src/main/java/com/wind/shiro/VelocityShiro.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/shiro/src/main/java/com/wind/service/impl/SysRoleServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-238">
-          <caret line="29" column="13" lean-forward="false" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/src/main/java/com/wind/utils/PageUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="347">
-          <caret line="32" column="11" lean-forward="false" selection-start-line="32" selection-start-column="11" selection-end-line="32" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/src/main/webapp/statics/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/src/main/webapp/statics/css/bootstrap.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/src/main/webapp/statics/css/all-skins.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/src/main/webapp/statics/css/index1.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="301" column="19" lean-forward="true" selection-start-line="301" selection-start-column="19" selection-end-line="301" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/shiro/src/main/java/com/wind/controller/GroupController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="43" column="57" lean-forward="true" selection-start-line="43" selection-start-column="57" selection-end-line="43" selection-end-column="57" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/shiro/src/main/java/com/wind/service/GroupService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="9" column="22" lean-forward="false" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/shiro/src/main/java/com/wind/service/impl/GroupServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="18" column="31" lean-forward="true" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/src/main/java/com/wind/dao/BaseDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="589">
-          <caret line="32" column="21" lean-forward="false" selection-start-line="32" selection-start-column="12" selection-end-line="32" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/src/main/webapp/WEB-INF/page/sys/user.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-153">
-          <caret line="47" column="22" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="83" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/src/main/java/com/wind/validator/group/UpdateGroup.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="17" lean-forward="false" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/shiro/src/main/java/com/wind/controller/AbstractController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="14" column="22" lean-forward="false" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/shiro/src/main/java/com/wind/controller/SysLoginController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="37" column="13" lean-forward="false" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/common/src/main/java/com/wind/validator/group/AddGroup.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="152">
@@ -1483,79 +1415,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/src/main/webapp/js/setting/newproject.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/src/main/webapp/WEB-INF/page/setting/newproject.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="551">
-          <caret line="29" column="50" lean-forward="true" selection-start-line="29" selection-start-column="50" selection-end-line="29" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/shiro/src/main/java/com/wind/dao/ProjectDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/shiro/src/main/java/com/wind/controller/ProjectController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1520">
-          <caret line="99" column="0" lean-forward="true" selection-start-line="99" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/shiro/src/main/java/com/wind/dao/GroupDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="6" column="17" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/src/main/webapp/WEB-INF/page/setting/group.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="578">
           <caret line="47" column="44" lean-forward="true" selection-start-line="47" selection-start-column="44" selection-end-line="47" selection-end-column="44" />
           <folding>
             <marker date="1514887959939" expanded="true" signature="1423:1525" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/shiro/src/main/java/com/wind/entity/ProjectEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="27" column="5" lean-forward="true" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
-          <folding>
-            <element signature="e#346#347#0" expanded="true" />
-            <element signature="e#371#372#0" expanded="true" />
-            <element signature="e#405#406#0" expanded="true" />
-            <element signature="e#433#434#0" expanded="true" />
-            <element signature="e#471#472#0" expanded="true" />
-            <element signature="e#505#506#0" expanded="true" />
-            <element signature="e#559#560#0" expanded="true" />
-            <element signature="e#605#606#0" expanded="true" />
-            <element signature="e#637#638#0" expanded="true" />
-            <element signature="e#667#668#0" expanded="true" />
-            <element signature="e#711#712#0" expanded="true" />
-            <element signature="e#749#750#0" expanded="true" />
-            <element signature="e#785#786#0" expanded="true" />
-            <element signature="e#817#818#0" expanded="true" />
-            <element signature="e#867#868#0" expanded="true" />
-            <element signature="e#909#910#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1619,13 +1484,231 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/shiro/src/main/resources/com/wind/dao/GroupDao.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+        <state relative-caret-position="446">
+          <caret line="31" column="14" lean-forward="true" selection-start-line="31" selection-start-column="14" selection-end-line="31" selection-end-column="14" />
           <folding>
             <marker date="1514879103763" expanded="true" signature="814:880" ph="insert into work_group... " />
             <marker date="1514879103763" expanded="true" signature="961:1142" ph="update work_... " />
             <marker date="1514879103763" expanded="true" signature="1719:1786" ph="select role_... sys_role" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shiro/src/main/java/com/wind/dao/GroupDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="6" column="17" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shiro/src/main/java/com/wind/service/GroupService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shiro/src/main/java/com/wind/service/impl/GroupServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="15" column="16" lean-forward="true" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
+          <folding>
+            <element signature="e#499#500#0" expanded="false" />
+            <element signature="e#545#546#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/src/main/java/com/wind/dao/BaseDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="388">
+          <caret line="28" column="8" lean-forward="false" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shiro/src/main/java/com/wind/service/impl/ProjectServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="589">
+          <caret line="33" column="10" lean-forward="false" selection-start-line="33" selection-start-column="10" selection-end-line="33" selection-end-column="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#632#633#0" expanded="true" />
+            <element signature="e#678#679#0" expanded="true" />
+            <element signature="e#747#748#0" expanded="true" />
+            <element signature="e#795#796#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shiro/src/main/java/com/wind/dao/ProjectDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="11" lean-forward="false" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/doc/db.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="157" column="0" lean-forward="false" selection-start-line="157" selection-start-column="0" selection-end-line="160" selection-end-column="169" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_151/src.zip!/java/util/HashMap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="474" column="0" lean-forward="false" selection-start-line="474" selection-start-column="0" selection-end-line="474" selection-end-column="0" />
+          <folding>
+            <element signature="e#19327#19328#0" expanded="false" />
+            <element signature="e#19410#19411#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/src/main/java/com/wind/utils/R.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="47" column="0" lean-forward="false" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+          <folding>
+            <element signature="e#289#290#0" expanded="false" />
+            <element signature="e#310#311#0" expanded="false" />
+            <element signature="e#804#805#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shiro/src/main/java/com/wind/service/ProjectService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="14" column="19" lean-forward="false" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shiro/src/main/java/com/wind/entity/ProjectEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="684">
+          <caret line="48" column="5" lean-forward="false" selection-start-line="48" selection-start-column="5" selection-end-line="48" selection-end-column="5" />
+          <folding>
+            <element signature="e#762#763#0" expanded="true" />
+            <element signature="e#789#790#0" expanded="true" />
+            <element signature="e#829#830#0" expanded="true" />
+            <element signature="e#861#862#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/src/main/webapp/js/setting/newproject.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1767">
+          <caret line="6" column="26" lean-forward="false" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/src/main/webapp/WEB-INF/page/setting/newproject.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="554">
+          <caret line="47" column="0" lean-forward="false" selection-start-line="47" selection-start-column="0" selection-end-line="49" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shiro/src/main/resources/com/wind/dao/projectDao.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="24" column="13" lean-forward="true" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+          <folding>
+            <marker date="1514951759625" expanded="true" signature="794:862" ph="insert into work_project... " />
+            <marker date="1514951759625" expanded="true" signature="945:1051" ph="update work_... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/src/main/webapp/statics/css/bootstrap.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="4" column="38046" lean-forward="false" selection-start-line="4" selection-start-column="38046" selection-end-line="4" selection-end-column="38046" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/src/main/webapp/statics/css/AdminLTE.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="6" column="59096" lean-forward="false" selection-start-line="6" selection-start-column="59096" selection-end-line="6" selection-end-column="59096" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/src/main/webapp/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="40" column="12" lean-forward="true" selection-start-line="40" selection-start-column="12" selection-end-line="40" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/src/main/webapp/WEB-INF/page/sys/log.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shiro/src/main/java/com/wind/controller/GroupController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-760">
+          <caret line="43" column="57" lean-forward="true" selection-start-line="43" selection-start-column="57" selection-end-line="43" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shiro/src/main/java/com/wind/controller/ProjectController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="94" column="0" lean-forward="false" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/github/axet/kaptcha/0.0.9/kaptcha-0.0.9.jar!/com/google/code/kaptcha/Producer.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="9" column="17" lean-forward="false" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shiro/src/main/java/com/wind/controller/SysLoginController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="40" column="18" lean-forward="false" selection-start-line="40" selection-start-column="18" selection-end-line="40" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/src/main/webapp/js/setting/newachievement.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/src/main/webapp/WEB-INF/page/setting/newachievement.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1406">
+          <caret line="74" column="7" lean-forward="true" selection-start-line="74" selection-start-column="7" selection-end-line="74" selection-end-column="7" />
+          <folding />
         </state>
       </provider>
     </entry>

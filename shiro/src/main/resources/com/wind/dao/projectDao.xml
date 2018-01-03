@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.wind.dao.ProjectDao">
+
+	<select id="queryList" resultType="com.wind.entity.ProjectEntity">
+		select * from work_project
+		<where>
+			<if test="name != null and name.trim() != ''">
+				and `name` like concat('%',#{name},'%')
+			</if>
+		</where>
+		<if test="offset != null and limit != null">
+			limit #{offset}, #{limit}
+		</if>
+	</select>
+
+	<select id="queryTotal" resultType="int">
+		select count(*) from work_project
+		<where>
+			<if test="name != null and name.trim() != ''">
+				and `name` like concat('%',#{name},'%')
+			</if>
+		</where>
+	</select>
+
+	<insert id="save" parameterType="com.wind.entity.ProjectEntity">
+		insert into work_project
+		(
+		`name`
+		)
+		values
+		(
+		#{name}
+		)
+	</insert>
+
+	<update id="update" parameterType="com.wind.entity.ProjectEntity">
+		update work_project
+		<set>
+			<if test="name != null">`name` = #{name}, </if>
+		</set>
+		where id = #{id}
+	</update>
+
+	<delete id="deleteBatch">
+		delete from work_project where id in
+		<foreach item="id" collection="array" open="(" separator="," close=")">
+			#{id}
+		</foreach>
+	</delete>
+
+</mapper>
