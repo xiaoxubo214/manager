@@ -8,6 +8,7 @@ $(function () {
             { label: '名称', name: 'name', width: 75 },
 			{ label: '邮箱', name: 'email', width: 90 },
 			{ label: '手机号', name: 'mobile', width: 100 },
+            { label: '所属组', name: 'groupId', width: 100 },
             { label: '小组负责人', name: 'leader', width: 80, formatter: function(value, options, row){
                 return value === 0 ?
                     '<span class="label label-danger">否</span>' :
@@ -62,9 +63,11 @@ var vm = new Vue({
 		showList: true,
 		title:null,
 		roleList:{},
+        groupList:{},
 		user:{
 			status:1,
-			roleIdList:[]
+			roleIdList:[],
+            groupId:null
 		}
 	},
 	methods: {
@@ -75,10 +78,12 @@ var vm = new Vue({
 			vm.showList = false;
 			vm.title = "新增";
 			vm.roleList = {};
-			vm.user = {status:1,roleIdList:[]};
+			vm.groupList = {};
+			vm.user = {status:1,roleIdList:[],groupId:null};
 			
 			//获取角色信息
 			this.getRoleList();
+			this.getGroupList();
 		},
 		update: function () {
 			var userId = getSelectedRow();
@@ -92,6 +97,7 @@ var vm = new Vue({
 			vm.getUser(userId);
 			//获取角色信息
 			this.getRoleList();
+            this.getGroupList();
 		},
 		del: function () {
 			var userIds = getSelectedRows();
@@ -145,6 +151,12 @@ var vm = new Vue({
 				vm.roleList = r.list;
 			});
 		},
+        getGroupList: function () {
+          $.get("../setting/group/select",function (r) {
+                vm.groupList =  r.list;
+                console.log(vm.groupList);
+          });
+        },
 		reload: function (event) {
 			vm.showList = true;
 			var page = $("#jqGrid").jqGrid('getGridParam','page');

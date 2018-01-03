@@ -73,7 +73,8 @@
 			`create_time`,
 			`name`,
 			`leader`,
-			`owner`
+			`owner`,
+			`group_id`
 		)
 		values
 		(
@@ -87,7 +88,8 @@
 			#{createTime},
 			#{name},
 			#{leader},
-			#{owner}
+			#{owner},
+			#{groupId}
 		)
 	</insert>
 	 
@@ -102,6 +104,7 @@
             <if test="name != null">`name` = #{name}, </if>
             <if test="leader != null">`leader` = #{leader}, </if>
             <if test="owner != null">`owner` = #{owner}, </if>
+            <if test="groupId != null">`group_id` = #{groupId}, </if>
 		</set>
 		where user_id = #{userId} 
 		<if test="createUserId != null">

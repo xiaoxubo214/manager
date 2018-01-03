@@ -63,8 +63,13 @@ public class SysUserEntity implements Serializable {
 	 * 是否是Owner
 	 * 状态  0：否   1：是
 	 */
-
 	private Integer owner;
+
+	/**
+	 * 组ID
+	 * 人员所属的组ID
+	 */
+	private Integer groupId;
 
 	/**
 	 * 状态  0：禁用   1：正常
@@ -236,6 +241,14 @@ public class SysUserEntity implements Serializable {
 
 	public void setCreateUserId(Long createUserId) {
 		this.createUserId = createUserId;
+	}
+
+	public Integer getGroupId() {
+		return groupId;
+	}
+
+	public void setGroupId(Integer groupId) {
+		this.groupId = groupId;
 	}
 	
 }

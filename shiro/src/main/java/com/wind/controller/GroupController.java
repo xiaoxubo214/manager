@@ -1,6 +1,7 @@
 package com.wind.controller;
 
 import com.wind.entity.GroupEntity;
+import com.wind.entity.SysRoleEntity;
 import com.wind.entity.SysUserEntity;
 import com.wind.service.GroupService;
 import com.wind.service.SysUserRoleService;
@@ -19,6 +20,7 @@ import org.apache.shiro.crypto.hash.Sha256Hash;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -47,6 +49,23 @@ public class GroupController extends AbstractController {
         PageUtils pageUtil = new PageUtils(groupList, total, query.getLimit(), query.getPage());
 
         return R.ok().put("page", pageUtil);
+    }
+
+    /**
+     * 角色列表
+     */
+    @RequestMapping("/select")
+    @RequiresPermissions("setting:group:select")
+    public R select(){
+        Map<String, Object> map = new HashMap<>();
+
+        //如果不是超级管理员，则只查询自己所拥有的角色列表
+        if(getUserId() != Constant.SUPER_ADMIN){
+            map.put("createUserId", getUserId());
+        }
+        List<GroupEntity> list = groupService.queryList(map);
+
+        return R.ok().put("list", list);
     }
 
     /**
