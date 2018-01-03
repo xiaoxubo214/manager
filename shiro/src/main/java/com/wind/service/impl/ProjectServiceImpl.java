@@ -30,8 +30,8 @@ public class ProjectServiceImpl implements ProjectService {
     }
 
     @Override
-    public void deleteBatch(Long[] projectDao){
-        //projectDao.
+    public void deleteBatch(Long[] projectIds){
+        projectDao.deleteBatch(projectIds);
     }
 
     @Override

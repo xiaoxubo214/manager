@@ -1,10 +1,11 @@
 $(function () {
     $("#jqGrid").jqGrid({
-        url: '../setting/project/list',
+        url: '../setting/achievement/list',
         datatype: "json",
         colModel: [
-            { label: '项目编号', name: 'id', index: "id", width: 45, key: true },
-			{ label: '项目名称', name: 'name', index: "name", width: 45, key: true },
+            { label: '绩效ID', name: 'id', index: "id", width: 45, key: true },
+			{ label: '绩效内容', name: 'name', index: "name", width: 45, key: true },
+            { label: '组ID', name: 'group_id', index: "group_id", width: 45, key: true },
         ],
 		viewrecords: true,
         height: 385,
@@ -37,14 +38,14 @@ var vm = new Vue({
 	el:'#rrapp',
 	data:{
 		q:{
-			projectId: null
+            achievementId: null
 		},
 		showList: true,
 		title:null,
-		projectList:{},
-		project:{
+        achievementList:{},
+        achievement:{
 			status:1,
-			projectIdList:[]
+            achievementIdList:[]
 		}
 	},
 	methods: {
@@ -54,37 +55,37 @@ var vm = new Vue({
 		add: function(){
 			vm.showList = false;
 			vm.title = "新增";
-			vm.projectList = {};
-            vm.project = {};
+			vm.achievementList = {};
+            vm.achievement = {};
 			
 			//获取角色信息
-			this.getProjectList();
+			this.getAchievementList();
 		},
 		update: function () {
-			var projectId = getSelectedRow();
-			if(projectId == null){
+			var achievementId = getSelectedRow();
+			if(achievementId == null){
 				return ;
 			}
 			
 			vm.showList = false;
             vm.title = "修改";
 			
-			vm.getProject(projectId);
+			vm.getAchievement(achievementId);
 			//获取角色信息
-			this.getProjectList();
+			this.getAchievementList();
 		},
 		del: function () {
-			var projectIds = getSelectedRows();
-			if(projectIds == null){
+			var achievementIds = getSelectedRows();
+			if(achievementIds == null){
 				return ;
 			}
 			
 			confirm('确定要删除选中的记录？', function(){
 				$.ajax({
 					type: "POST",
-				    url: "../setting/project/delete",
+				    url: "../setting/achievement/delete",
                     contentType: "application/json",
-				    data: JSON.stringify(projectIds),
+				    data: JSON.stringify(achievementIds),
 				    success: function(r){
 						if(r.code == 0){
 							alert('操作成功', function(index){
@@ -98,13 +99,13 @@ var vm = new Vue({
 			});
 		},
 		saveOrUpdate: function (event) {
-			var url = vm.project.projectId == null ? "../setting/project/save" : "../setting/project/update";
+			var url = vm.achievement.achievementId == null ? "../setting/achievement/save" : "../setting/achievement/update";
 
 			$.ajax({
 				type: "POST",
 			    url: url,
                 contentType: "application/json",
-			    data: JSON.stringify(vm.project),
+			    data: JSON.stringify(vm.achievement),
 			    success: function(r){
 			    	if(r.code === 0){
 						alert('操作成功', function(index){
@@ -116,14 +117,14 @@ var vm = new Vue({
 				}
 			});
 		},
-		getProject: function(projectId){
-			$.get("../setting/project/info/"+projectId, function(r){
-				vm.project = r.project;
+		getAchievement: function(achievementId){
+			$.get("../setting/achievement/info/"+achievementId, function(r){
+				vm.achievement = r.achievement;
 			});
 		},
-		getGroupList: function(){
-			$.get("../setting/project/select", function(r){
-				vm.projectList = r.list;
+		getAchievementList: function(){
+			$.get("../setting/achievement/select", function(r){
+				vm.achievementList = r.list;
 			});
 		},
 		reload: function (event) {
