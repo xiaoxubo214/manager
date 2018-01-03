@@ -1,38 +1,35 @@
 package com.wind.controller;
 
-import com.wind.entity.GroupEntity;
-import com.wind.entity.SysUserEntity;
-import com.wind.service.GroupService;
-import com.wind.service.SysUserRoleService;
-import com.wind.utils.*;
-import com.wind.validator.Assert;
-import com.wind.validator.ValidatorUtils;
-import com.wind.validator.group.AddGroup;
 import com.wind.annotation.SysLog;
-import com.wind.utils.*;
-import com.wind.validator.group.Group;
-import com.wind.validator.group.UpdateGroup;
-
+import com.wind.entity.GroupEntity;
+import com.wind.service.GroupService;
+import com.wind.utils.Constant;
+import com.wind.utils.PageUtils;
+import com.wind.utils.Query;
+import com.wind.utils.R;
+import com.wind.validator.ValidatorUtils;
 import org.apache.commons.lang.ArrayUtils;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
-import org.apache.shiro.crypto.hash.Sha256Hash;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 import java.util.Map;
 
 
 @RestController
-@RequestMapping("/setting/group")
-public class GroupController extends AbstractController {
+@RequestMapping("/setting/project")
+public class ProjectController extends AbstractController {
     @Autowired
     private GroupService groupService;
     /**
      * 所有组列表
      */
     @RequestMapping("/list")
-    @RequiresPermissions("setting:group:list")
+    @RequiresPermissions("setting:project:list")
     public R list(@RequestParam Map<String, Object> params){
         //只有超级管理员，才能查看所有管理员列表
         if(getUserId() != Constant.SUPER_ADMIN){
@@ -65,7 +62,7 @@ public class GroupController extends AbstractController {
      */
     @SysLog("保存组")
     @RequestMapping("/save")
-    @RequiresPermissions("setting:group:save")
+    @RequiresPermissions("setting:project:save")
     public R save(@RequestBody GroupEntity groupEntity){
         ValidatorUtils.validateEntity(groupEntity, GroupEntity.class);
 
@@ -78,9 +75,9 @@ public class GroupController extends AbstractController {
     /**
      * 修改组
      */
-    @SysLog("修改组")
+    @SysLog("修改项目")
     @RequestMapping("/update")
-    @RequiresPermissions("setting:group:update")
+    @RequiresPermissions("setting:project:update")
     public R update(@RequestBody GroupEntity groupEntity){
         ValidatorUtils.validateEntity(groupEntity, GroupEntity.class);
 
@@ -95,7 +92,7 @@ public class GroupController extends AbstractController {
      */
     @SysLog("删除组")
     @RequestMapping("/delete")
-    @RequiresPermissions("setting:group:delete")
+    @RequiresPermissions("setting:project:delete")
     public R delete(@RequestBody Long[] userIds){
         if(ArrayUtils.contains(userIds, 1L)){
             return R.error("不能删除");

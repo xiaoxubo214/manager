@@ -49,6 +49,24 @@ public class SysUserEntity implements Serializable {
 	private String mobile;
 
 	/**
+	 * 名称
+	 */
+	private String name;
+
+	/**
+	 * 是否是leader
+	 * 状态  0：否   1：是
+	 */
+	private Integer leader;
+
+	/**
+	 * 是否是Owner
+	 * 状态  0：否   1：是
+	 */
+
+	private Integer owner;
+
+	/**
 	 * 状态  0：禁用   1：正常
 	 */
 	private Integer status;
@@ -178,6 +196,30 @@ public class SysUserEntity implements Serializable {
 	 */
 	public Date getCreateTime() {
 		return createTime;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public Integer getLeader() {
+		return leader;
+	}
+
+	public void setLeader(Integer leader) {
+		this.leader = leader;
+	}
+
+	public Integer getOwner() {
+		return owner;
+	}
+
+	public void setOwner(Integer owner) {
+		this.owner = owner;
 	}
 
 	public List<Long> getRoleIdList() {

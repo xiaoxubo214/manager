@@ -6,24 +6,25 @@ public class GroupEntity implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    //用户ID
-    private Long groupId;
+    //组ID
+    private Long id;
     //用户名
-    private String name;
+    private String Name;
 
-    public Long getGroupId() {
-        return groupId;
+    public Long getId() {
+        return id;
     }
 
-    public void setGroupId(Long groupId) {
-        this.groupId = groupId;
+    public void setId(Long id) {
+        this.id = id;
     }
 
-    public String getGroupName() {
-        return name;
+    public String getName() {
+        return Name;
     }
 
-    public void setGroupName(String name) {
-        this.name = name;
+    public void setName(String name) {
+        Name = name;
     }
+
 }

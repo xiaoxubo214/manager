@@ -70,7 +70,10 @@
 			`mobile`, 
 			`status`, 
 			`create_user_id`,
-			`create_time`
+			`create_time`,
+			`name`,
+			`leader`,
+			`owner`
 		)
 		values
 		(
@@ -81,18 +84,24 @@
 			#{mobile}, 
 			#{status}, 
 			#{createUserId},
-			#{createTime}
+			#{createTime},
+			#{name},
+			#{leader},
+			#{owner}
 		)
 	</insert>
 	 
 	<update id="update" parameterType="com.wind.entity.SysUserEntity">
 		update sys_user 
-		<set> 
+		<set>
 			<if test="username != null">`username` = #{username}, </if>
 			<if test="password != null">`password` = #{password}, </if>
 			<if test="email != null">`email` = #{email}, </if>
 			<if test="mobile != null">`mobile` = #{mobile}, </if>
 			<if test="status != null">`status` = #{status}, </if>
+            <if test="name != null">`name` = #{name}, </if>
+            <if test="leader != null">`leader` = #{leader}, </if>
+            <if test="owner != null">`owner` = #{owner}, </if>
 		</set>
 		where user_id = #{userId} 
 		<if test="createUserId != null">

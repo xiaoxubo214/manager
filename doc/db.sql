@@ -159,6 +159,7 @@ INSERT INTO `sys_menu` (`menu_id`, `parent_id`, `name`, `url`, `perms`, `type`, 
 INSERT INTO `sys_menu` (`menu_id`, `parent_id`, `name`, `url`, `perms`, `type`, `icon`, `order_num`) VALUES ('51', '40', '新增', NULL, 'sys:group:save,sys:group:select', '2', NULL, '0');
 INSERT INTO `sys_menu` (`menu_id`, `parent_id`, `name`, `url`, `perms`, `type`, `icon`, `order_num`) VALUES ('52', '40', '修改', NULL, 'sys:group:update,sys:group:select', '2', NULL, '0');
 INSERT INTO `sys_menu` (`menu_id`, `parent_id`, `name`, `url`, `perms`, `type`, `icon`, `order_num`) VALUES ('53', '40', '删除', NULL, 'sys:group:delete', '2', NULL, '0');
+
 INSERT INTO `sys_menu` (`menu_id`, `parent_id`, `name`, `url`, `perms`, `type`, `icon`, `order_num`) VALUES ('41', '1', '新建项目', 'work/newproject.html', NULL, '1', 'fa fa-bug', '4');
 INSERT INTO `sys_menu` (`menu_id`, `parent_id`, `name`, `url`, `perms`, `type`, `icon`, `order_num`) VALUES ('42', '1', '新建绩效标准', 'work/newachievement.html', NULL, '1', 'fa fa-bug', '4');
 

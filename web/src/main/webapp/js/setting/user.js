@@ -3,10 +3,27 @@ $(function () {
         url: '../sys/user/list',
         datatype: "json",
         colModel: [			
-			{ label: '项目名称', name: 'projectId', index: "user_id", width: 45, key: true },
-			{ label: '成员', name: 'member', width: 75 },
-			{ label: '打分情况', name: 'score', width: 90 },
-			{ label: '总分', name: 'total', width: 100 },
+			{ label: '用户ID', name: 'userId', index: "user_id", width: 45, key: true },
+			{ label: '用户名', name: 'username', width: 75 },
+            { label: '名称', name: 'name', width: 75 },
+			{ label: '邮箱', name: 'email', width: 90 },
+			{ label: '手机号', name: 'mobile', width: 100 },
+            { label: '小组负责人', name: 'leader', width: 80, formatter: function(value, options, row){
+                return value === 0 ?
+                    '<span class="label label-danger">否</span>' :
+                    '<span class="label label-success">是</span>';
+            }},
+            { label: '项目负责人', name: 'owner', width: 80, formatter: function(value, options, row){
+                return value === 0 ?
+                    '<span class="label label-danger">否</span>' :
+                    '<span class="label label-success">是</span>';
+            }},
+            { label: '状态', name: 'status', width: 80, formatter: function(value, options, row){
+                return value === 0 ?
+                    '<span class="label label-danger">禁用</span>' :
+                    '<span class="label label-success">正常</span>';
+            }},
+
 			{ label: '创建时间', name: 'createTime', index: "create_time", width: 80}
         ],
 		viewrecords: true,
