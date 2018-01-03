@@ -11,8 +11,12 @@ public class AchievementEntity implements Serializable {
 
     //绩效内容
     private String name;
+
+    //分数
+    private Integer score;
     //组ID
     private Long groupId;
+
 
     public Long getId() {
         return id;
@@ -36,5 +40,13 @@ public class AchievementEntity implements Serializable {
 
     public void setGroupId(Long groupId) {
         this.groupId = groupId;
+    }
+
+    public Integer getScore() {
+        return score;
+    }
+
+    public void setScore(Integer score) {
+        this.score = score;
     }
 }

@@ -4,7 +4,7 @@
 <mapper namespace="com.wind.dao.AchievementDao">
 
 	<select id="queryList" resultType="com.wind.entity.AchievementEntity">
-		select * from work_achievement
+		select * from work_standard
 		<where>
 			<if test="name != null and name.trim() != ''">
 				and `name` like concat('%',#{name},'%')
@@ -16,7 +16,7 @@
 	</select>
 
 	<select id="queryTotal" resultType="int">
-		select count(*) from work_achievement
+		select count(*) from work_standard
 		<where>
 			<if test="name != null and name.trim() != ''">
 				and `name` like concat('%',#{name},'%')
@@ -25,18 +25,22 @@
 	</select>
 
 	<insert id="save" parameterType="com.wind.entity.AchievementEntity">
-		insert into work_achievement
+		insert into work_standard
 		(
-		`name`
+		`name`,
+		`score`,
+		`group_id`
 		)
 		values
 		(
-		#{name}
+		#{name},
+		#{score},
+		#{groupId}
 		)
 	</insert>
 
 	<update id="update" parameterType="com.wind.entity.AchievementEntity">
-		update work_achievement
+		update work_standard
 		<set>
 			<if test="name != null">`name` = #{name}, </if>
 			<if test="remark != null">`remark` = #{remark}</if>
@@ -45,7 +49,7 @@
 	</update>
 
 	<delete id="deleteBatch">
-		delete from work_achievement where id in
+		delete from work_standard where id in
 		<foreach item="id" collection="array" open="(" separator="," close=")">
 			#{id}
 		</foreach>

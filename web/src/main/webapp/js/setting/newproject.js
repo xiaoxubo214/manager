@@ -5,6 +5,8 @@ $(function () {
         colModel: [
             { label: '项目编号', name: 'id', index: "id", width: 45, key: true },
 			{ label: '项目名称', name: 'name', index: "name", width: 45, key: true },
+            { label: '项目负责人', name: 'user', index: "user", width: 45, key: true },
+            { label: '项目负责人ID', name: 'userId', index: "userId", width: 45, key: true },
         ],
 		viewrecords: true,
         height: 385,
@@ -42,9 +44,10 @@ var vm = new Vue({
 		showList: true,
 		title:null,
 		projectList:{},
+		userList:{},
 		project:{
 			status:1,
-			projectIdList:[]
+            userId:null
 		}
 	},
 	methods: {
@@ -55,10 +58,11 @@ var vm = new Vue({
 			vm.showList = false;
 			vm.title = "新增";
 			vm.projectList = {};
-            vm.project = {};
+            vm.project = {userId:null};
+            vm.userList = {};
 			
 			//获取角色信息
-			this.getProjectList();
+			this.getUserList();
 		},
 		update: function () {
 			var projectId = getSelectedRow();
@@ -70,8 +74,8 @@ var vm = new Vue({
             vm.title = "修改";
 			
 			vm.getProject(projectId);
-			//获取角色信息
-			this.getProjectList();
+
+			this.getUserList();
 		},
 		del: function () {
 			var projectIds = getSelectedRows();
@@ -99,7 +103,6 @@ var vm = new Vue({
 		},
 		saveOrUpdate: function (event) {
 			var url = vm.project.projectId == null ? "../setting/project/save" : "../setting/project/update";
-
 			$.ajax({
 				type: "POST",
 			    url: url,
@@ -121,9 +124,9 @@ var vm = new Vue({
 				vm.project = r.project;
 			});
 		},
-		getGroupList: function(){
-			$.get("../setting/project/select", function(r){
-				vm.projectList = r.list;
+		getUserList: function(){
+			$.get("../sys/user/select", function(r){
+				vm.userList = r.list;
 			});
 		},
 		reload: function (event) {

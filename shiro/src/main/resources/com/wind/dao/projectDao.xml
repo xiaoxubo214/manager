@@ -27,11 +27,13 @@
 	<insert id="save" parameterType="com.wind.entity.ProjectEntity">
 		insert into work_project
 		(
-		`name`
+		`name`,
+		`user_id`
 		)
 		values
 		(
-		#{name}
+		#{name},
+		#{userId}
 		)
 	</insert>
 

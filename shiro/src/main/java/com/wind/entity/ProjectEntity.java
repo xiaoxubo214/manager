@@ -12,7 +12,7 @@ public class ProjectEntity implements Serializable {
     //项目名称
     private String name;
     //项目负责人ID
-    private Long ownerId;
+    private Long userId;
     //负责人名称
     private String ownerName;
 
@@ -24,12 +24,12 @@ public class ProjectEntity implements Serializable {
         this.id = id;
     }
 
-    public Long getOwnerId() {
-        return ownerId;
+    public Long getUserId() {
+        return userId;
     }
 
-    public void setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
+    public void setUserId(Long userId) {
+        this.userId = userId;
     }
 
     public String getOwnerName() {

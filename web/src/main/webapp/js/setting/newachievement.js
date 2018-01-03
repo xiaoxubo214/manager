@@ -5,7 +5,8 @@ $(function () {
         colModel: [
             { label: '绩效ID', name: 'id', index: "id", width: 45, key: true },
 			{ label: '绩效内容', name: 'name', index: "name", width: 45, key: true },
-            { label: '组ID', name: 'group_id', index: "group_id", width: 45, key: true },
+            { label: '分数', name: 'score', index: "score", width: 45, key: true },
+            { label: '组ID', name: 'groupId', index: "groupId", width: 45, key: true },
         ],
 		viewrecords: true,
         height: 385,
@@ -43,9 +44,11 @@ var vm = new Vue({
 		showList: true,
 		title:null,
         achievementList:{},
+        groupList:{},
         achievement:{
 			status:1,
-            achievementIdList:[]
+            achievementIdList:[],
+			groupId:null
 		}
 	},
 	methods: {
@@ -56,10 +59,11 @@ var vm = new Vue({
 			vm.showList = false;
 			vm.title = "新增";
 			vm.achievementList = {};
-            vm.achievement = {};
+            vm.groupList = {};
+            vm.achievement = {groupId:null};
 			
-			//获取角色信息
-			this.getAchievementList();
+
+			this.getGroupList();
 		},
 		update: function () {
 			var achievementId = getSelectedRow();
@@ -71,8 +75,7 @@ var vm = new Vue({
             vm.title = "修改";
 			
 			vm.getAchievement(achievementId);
-			//获取角色信息
-			this.getAchievementList();
+			this.getGroupList();
 		},
 		del: function () {
 			var achievementIds = getSelectedRows();
@@ -122,11 +125,12 @@ var vm = new Vue({
 				vm.achievement = r.achievement;
 			});
 		},
-		getAchievementList: function(){
-			$.get("../setting/achievement/select", function(r){
-				vm.achievementList = r.list;
-			});
-		},
+        getGroupList: function () {
+            $.get("../setting/group/select",function (r) {
+                vm.groupList = r.list;
+                console.log(vm.groupList);
+            });
+        },
 		reload: function (event) {
 			vm.showList = true;
 			var page = $("#jqGrid").jqGrid('getGridParam','page');

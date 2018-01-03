@@ -1,7 +1,9 @@
 package com.wind.controller;
 
 import com.wind.annotation.SysLog;
+import com.wind.entity.AchievementEntity;
 import com.wind.entity.ProjectEntity;
+import com.wind.service.AchievementService;
 import com.wind.service.ProjectService;
 import com.wind.utils.Constant;
 import com.wind.utils.PageUtils;
@@ -24,22 +26,22 @@ import java.util.Map;
 @RequestMapping("/setting/achievement")
 public class AchievementController extends AbstractController {
     @Autowired
-    private ProjectService projectService;
+    private AchievementService achievementService;
     /**
      * 所有组列表
      */
     @RequestMapping("/list")
     @RequiresPermissions("setting:achievement:list")
     public R list(@RequestParam Map<String, Object> params){
-        //只有超级管理员，才能查看所有管理员列表
+        // 只有超级管理员，才能查看所有管理员列表
         if(getUserId() != Constant.SUPER_ADMIN){
             params.put("createUserId", getUserId());
         }
 
         //查询列表数据
         Query query = new Query(params);
-        List<ProjectEntity> groupList = projectService.queryList(query);
-        int total = projectService.queryTotal(query);
+        List<AchievementEntity> groupList = achievementService.queryList(query);
+        int total = achievementService.queryTotal(query);
 
         PageUtils pageUtil = new PageUtils(groupList, total, query.getLimit(), query.getPage());
 
@@ -58,31 +60,31 @@ public class AchievementController extends AbstractController {
 
 
     /**
-     * 保存用户
+     * 修改绩效标准
      */
-    @SysLog("新建绩效标准")
+    @SysLog("修改绩效标准")
     @RequestMapping("/save")
     @RequiresPermissions("setting:achievement:save")
-    public R save(@RequestBody ProjectEntity projectEntity){
-        ValidatorUtils.validateEntity(projectEntity, ProjectEntity.class);
+    public R save(@RequestBody AchievementEntity achievementEntity){
+        ValidatorUtils.validateEntity(achievementService, AchievementEntity.class);
 
         //g.setCreateUserId(getUserId());
-        projectService.save(projectEntity);
+        achievementService.save(achievementEntity);
 
         return R.ok();
     }
 
     /**
-     * 修改组
+     * 修改绩效标准
      */
     @SysLog("修改绩效标准")
     @RequestMapping("/update")
     @RequiresPermissions("setting:achievement:update")
-    public R update(@RequestBody ProjectEntity projectEntity){
-        ValidatorUtils.validateEntity(projectEntity, ProjectEntity.class);
+    public R update(@RequestBody AchievementEntity achievementEntity){
+        ValidatorUtils.validateEntity(achievementEntity, AchievementEntity.class);
 
         //user.setCreateUserId(getUserId());
-        projectService.update(projectEntity);
+        achievementService.update(achievementEntity);
 
         return R.ok();
     }
@@ -102,7 +104,7 @@ public class AchievementController extends AbstractController {
             return R.error("不能删除");
         }*/
 
-        projectService.deleteBatch(projectIds);
+        achievementService.deleteBatch(projectIds);
 
         return R.ok();
     }
