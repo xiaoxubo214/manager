@@ -126,7 +126,7 @@ CREATE TABLE `work_achievement` (
 INSERT INTO `sys_user` (`user_id`, `username`, `password`, `email`, `mobile`, `status`, `create_user_id`, `create_time`) VALUES ('1', 'admin', '8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918', 'root@shbaoyuantech.com', '15102115465', '1', '1', '2016-11-11 11:11:11');
 INSERT INTO `sys_menu` (`menu_id`, `parent_id`, `name`, `url`, `perms`, `type`, `icon`, `order_num`) VALUES ('1', '0', '系统管理', NULL, NULL, '0', 'fa fa-cog', '0');
 
-INSERT INTO `sys_menu` (`menu_id`, `parent_id`, `name`, `url`, `perms`, `type`, `icon`, `order_num`) VALUES ('2', '1', '账号管理', 'setting/user.html', NULL, '1', 'fa fa-user', '1');
+INSERT INTO `sys_menu` (`menu_id`, `parent_id`, `name`, `url`, `perms`, `type`, `icon`, `order_num`) VALUES ('2', '1', '账号管理', 'setting/user.html', 'sys:role:select', '1', 'fa fa-user', '1');
 INSERT INTO `sys_menu` (`menu_id`, `parent_id`, `name`, `url`, `perms`, `type`, `icon`, `order_num`) VALUES ('101', '2', '查看', NULL, 'sys:user:list,sys:user:info', '2', NULL, '0');
 INSERT INTO `sys_menu` (`menu_id`, `parent_id`, `name`, `url`, `perms`, `type`, `icon`, `order_num`) VALUES ('102', '2', '新增', NULL, 'sys:user:save,sys:user:select', '2', NULL, '0');
 INSERT INTO `sys_menu` (`menu_id`, `parent_id`, `name`, `url`, `perms`, `type`, `icon`, `order_num`) VALUES ('103', '2', '修改', NULL, 'sys:user:update,sys:user:select', '2', NULL, '0');
@@ -181,10 +181,10 @@ INSERT INTO `sys_menu` (`menu_id`, `parent_id`, `name`, `url`, `perms`, `type`, 
 INSERT INTO `sys_menu` (`menu_id`, `parent_id`, `name`, `url`, `perms`, `type`, `icon`, `order_num`) VALUES ('140', '11', '删除', NULL, 'setting:project:delete', '2', NULL, '0');
 
 INSERT INTO `sys_menu` (`menu_id`, `parent_id`, `name`, `url`, `perms`, `type`, `icon`, `order_num`) VALUES ('12', '1', '新建绩效标准', 'setting/newachievement.html', NULL, '1', 'fa fa-bug', '4');
-INSERT INTO `sys_menu` (`menu_id`, `parent_id`, `name`, `url`, `perms`, `type`, `icon`, `order_num`) VALUES ('141', '12', '查看', NULL, 'setting:newachievement:list,setting:newachievement:info', '2', NULL, '0');
-INSERT INTO `sys_menu` (`menu_id`, `parent_id`, `name`, `url`, `perms`, `type`, `icon`, `order_num`) VALUES ('142', '12', '新增', NULL, 'setting:newachievement:save,setting:projectachievement:select', '2', NULL, '0');
-INSERT INTO `sys_menu` (`menu_id`, `parent_id`, `name`, `url`, `perms`, `type`, `icon`, `order_num`) VALUES ('143', '12', '修改', NULL, 'setting:newachievement:update,setting:newachievement:select', '2', NULL, '0');
-INSERT INTO `sys_menu` (`menu_id`, `parent_id`, `name`, `url`, `perms`, `type`, `icon`, `order_num`) VALUES ('144', '12', '删除', NULL, 'setting:newachievement:delete', '2', NULL, '0');
+INSERT INTO `sys_menu` (`menu_id`, `parent_id`, `name`, `url`, `perms`, `type`, `icon`, `order_num`) VALUES ('141', '12', '查看', NULL, 'setting:achievement:list,setting:achievement:info', '2', NULL, '0');
+INSERT INTO `sys_menu` (`menu_id`, `parent_id`, `name`, `url`, `perms`, `type`, `icon`, `order_num`) VALUES ('142', '12', '新增', NULL, 'setting:achievement:save,setting:achievement:select', '2', NULL, '0');
+INSERT INTO `sys_menu` (`menu_id`, `parent_id`, `name`, `url`, `perms`, `type`, `icon`, `order_num`) VALUES ('143', '12', '修改', NULL, 'setting:achievement:update,setting:achievement:select', '2', NULL, '0');
+INSERT INTO `sys_menu` (`menu_id`, `parent_id`, `name`, `url`, `perms`, `type`, `icon`, `order_num`) VALUES ('144', '12', '删除', NULL, 'setting:achievement:delete', '2', NULL, '0');
 
 
 INSERT INTO `sys_menu` (`menu_id`, `parent_id`, `name`, `url`, `perms`, `type`, `icon`, `order_num`) VALUES ('13', '1', '新建项目绩效', 'setting/projectachievement.html', 'setting:projectachievement:list', '1', 'fa fa-bug', '4');
