@@ -2,33 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="41efad8c-4260-4151-a363-2b818488b01e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shiro/src/main/java/com/wind/controller/ProjectAchievementController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shiro/src/main/java/com/wind/dao/ProjectAchievementDao.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shiro/src/main/java/com/wind/entity/ProjectAchievementEntity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shiro/src/main/java/com/wind/service/ProjectAchievementService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/page/setting/projectachievement.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/src/main/webapp/js/setting/projectachievement.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/db.sql" afterPath="$PROJECT_DIR$/doc/db.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shiro/src/main/java/com/wind/entity/AchievementEntity.java" afterPath="$PROJECT_DIR$/shiro/src/main/java/com/wind/entity/AchievementEntity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shiro/src/main/java/com/wind/entity/GroupEntity.java" afterPath="$PROJECT_DIR$/shiro/src/main/java/com/wind/entity/GroupEntity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shiro/src/main/java/com/wind/entity/ProjectEntity.java" afterPath="$PROJECT_DIR$/shiro/src/main/java/com/wind/entity/ProjectEntity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shiro/src/main/java/com/wind/entity/SysUserEntity.java" afterPath="$PROJECT_DIR$/shiro/src/main/java/com/wind/entity/SysUserEntity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shiro/src/main/resources/com/wind/dao/AchievementDao.xml" afterPath="$PROJECT_DIR$/shiro/src/main/resources/com/wind/dao/AchievementDao.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shiro/src/main/resources/com/wind/dao/GroupDao.xml" afterPath="$PROJECT_DIR$/shiro/src/main/resources/com/wind/dao/GroupDao.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shiro/src/main/resources/com/wind/dao/SysUserDao.xml" afterPath="$PROJECT_DIR$/shiro/src/main/resources/com/wind/dao/SysUserDao.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shiro/src/main/resources/com/wind/dao/projectDao.xml" afterPath="$PROJECT_DIR$/shiro/src/main/resources/com/wind/dao/projectDao.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/page/setting/group.html" afterPath="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/page/setting/group.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/page/setting/newachievement.html" afterPath="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/page/setting/newachievement.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/page/setting/newproject.html" afterPath="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/page/setting/newproject.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/page/setting/user.html" afterPath="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/page/setting/user.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/src/main/webapp/js/setting/group.js" afterPath="$PROJECT_DIR$/web/src/main/webapp/js/setting/group.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/src/main/webapp/js/setting/newachievement.js" afterPath="$PROJECT_DIR$/web/src/main/webapp/js/setting/newachievement.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/src/main/webapp/js/setting/newproject.js" afterPath="$PROJECT_DIR$/web/src/main/webapp/js/setting/newproject.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/src/main/webapp/js/setting/role.js" afterPath="$PROJECT_DIR$/web/src/main/webapp/js/setting/role.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/src/main/webapp/js/setting/user.js" afterPath="$PROJECT_DIR$/web/src/main/webapp/js/setting/user.js" />
     </list>
     <ignored path="$PROJECT_DIR$/web/target/" />
     <ignored path="$PROJECT_DIR$/shiro/target/" />
@@ -58,21 +32,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="db.sql" pinned="false" current-in-tab="false">
+      <file leaf-file-name="db.sql" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/doc/db.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-893">
-              <caret line="136" column="181" lean-forward="true" selection-start-line="136" selection-start-column="181" selection-end-line="136" selection-end-column="181" />
+            <state relative-caret-position="-1539">
+              <caret line="150" column="119" lean-forward="false" selection-start-line="150" selection-start-column="117" selection-end-line="150" selection-end-column="119" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="role.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="role.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/src/main/webapp/WEB-INF/page/setting/role.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="398">
+              <caret line="52" column="95" lean-forward="true" selection-start-line="52" selection-start-column="95" selection-end-line="52" selection-end-column="95" />
               <folding />
             </state>
           </provider>
@@ -1003,12 +977,12 @@
       <workItem from="1514977685239" duration="2169000" />
       <workItem from="1515033057678" duration="4461000" />
       <workItem from="1515052575715" duration="3691000" />
-      <workItem from="1515380455956" duration="6924000" />
+      <workItem from="1515380455956" duration="7260000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="96931000" />
+    <option name="totallyTimeSpent" value="97267000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1548,18 +1522,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/doc/db.sql">
+    <entry file="file://$PROJECT_DIR$/web/src/main/webapp/WEB-INF/page/setting/role.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-893">
-          <caret line="136" column="181" lean-forward="true" selection-start-line="136" selection-start-column="181" selection-end-line="136" selection-end-column="181" />
+        <state relative-caret-position="398">
+          <caret line="52" column="95" lean-forward="true" selection-start-line="52" selection-start-column="95" selection-end-line="52" selection-end-column="95" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/src/main/webapp/WEB-INF/page/setting/role.html">
+    <entry file="file://$PROJECT_DIR$/doc/db.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="-1539">
+          <caret line="150" column="119" lean-forward="false" selection-start-line="150" selection-start-column="117" selection-end-line="150" selection-end-column="119" />
           <folding />
         </state>
       </provider>
