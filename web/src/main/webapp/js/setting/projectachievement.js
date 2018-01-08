@@ -3,9 +3,17 @@ $(function () {
         url: '../setting/project/list',
         datatype: "json",
         colModel: [
-            { label: '项目编号', name: 'id', index: "id", width: 45, key: true },
+            { label: '单据编号', name: 'id', index: "id", width: 45, key: true },
 			{ label: '项目名称', name: 'projectName', index: "projectName", width: 45, key: true },
-            { label: '项目负责人', name: 'name', index: "name", width: 45, key: true },
+            { label: '考核人', name: 'name', index: "name", width: 45, key: true },
+            { label: '负责人', name: 'owner', index: "name", width: 45, key: true },
+            { label: '开始时间', name: 'starttime', index: "starttime", width: 45, key: true },
+            { label: '截止时间', name: 'endtime', index: "endtime", width: 45, key: true },
+            { label: '是否结束', name: 'finish', width: 80, formatter: function(value, options, row){
+                return value === 0 ?
+                    '<span class="label label-danger">否</span>' :
+                    '<span class="label label-success">是</span>';
+            }},
         ],
 		viewrecords: true,
         height: 385,

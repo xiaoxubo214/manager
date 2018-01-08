@@ -4,7 +4,7 @@
 <mapper namespace="com.wind.dao.AchievementDao">
 
 	<select id="queryList" resultType="com.wind.entity.AchievementEntity">
-		select * from work_standard
+		select s.id,s.name,s.group_id,s.score,g.group_name from work_standard s inner join work_group g on s.group_id = g.id
 		<where>
 			<if test="name != null and name.trim() != ''">
 				and `name` like concat('%',#{name},'%')

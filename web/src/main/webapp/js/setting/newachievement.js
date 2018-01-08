@@ -6,7 +6,7 @@ $(function () {
             { label: '绩效ID', name: 'id', index: "id", width: 45, key: true },
 			{ label: '绩效内容', name: 'name', index: "name", width: 45, key: true },
             { label: '分数', name: 'score', index: "score", width: 45, key: true },
-            { label: '组ID', name: 'groupId', index: "groupId", width: 45, key: true },
+            { label: '所属组', name: 'groupName', index: "groupName", width: 45, key: true },
         ],
 		viewrecords: true,
         height: 385,

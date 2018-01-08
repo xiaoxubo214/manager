@@ -5,8 +5,8 @@ $(function () {
         colModel: [			
 			{ label: '角色ID', name: 'roleId', index: "role_id", width: 45, key: true },
 			{ label: '角色名称', name: 'roleName', index: "role_name", width: 75 },
-			{ label: '备注', name: 'remark', width: 100 },
-			{ label: '创建时间', name: 'createTime', index: "create_time", width: 80}
+			{ label: '创建时间', name: 'createTime', index: "create_time", width: 80},
+            { label: '备注', name: 'remark', width: 100 },
         ],
 		viewrecords: true,
         height: 385,

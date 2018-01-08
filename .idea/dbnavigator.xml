@@ -25,7 +25,7 @@
     <show-object-properties value="true" />
     <loaded-nodes>
       <connection connection-id="338520ec-3a59-4bfc-b4eb-918a98d636be">
-        <schema name="pm" object-types="table" />
+        <schema name="project_manager" object-types="function, table" />
       </connection>
     </loaded-nodes>
   </component>
@@ -38,7 +38,7 @@
     <last-used-providers />
   </component>
   <component name="DBNavigator.Project.FileConnectionMappingManager">
-    <mapping file-url="file://$PROJECT_DIR$/doc/db.sql" connection-id="338520ec-3a59-4bfc-b4eb-918a98d636be" current-schema="pm" />
+    <mapping file-url="file://$PROJECT_DIR$/doc/db.sql" connection-id="338520ec-3a59-4bfc-b4eb-918a98d636be" current-schema="project_manager" />
   </component>
   <component name="DBNavigator.Project.MethodExecutionManager">
     <method-browser />

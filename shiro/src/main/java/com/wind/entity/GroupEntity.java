@@ -8,8 +8,10 @@ public class GroupEntity implements Serializable {
 
     //组ID
     private Long id;
+
     //用户名
-    private String Name;
+    private String groupName;
+
 
     public Long getId() {
         return id;
@@ -19,12 +21,12 @@ public class GroupEntity implements Serializable {
         this.id = id;
     }
 
-    public String getName() {
-        return Name;
+    public String getGroupName() {
+        return groupName;
     }
 
-    public void setName(String name) {
-        Name = name;
+    public void setGroupName(String groupName) {
+        this.groupName = groupName;
     }
 
 }

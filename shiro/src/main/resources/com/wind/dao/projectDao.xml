@@ -4,10 +4,10 @@
 <mapper namespace="com.wind.dao.ProjectDao">
 
 	<select id="queryList" resultType="com.wind.entity.ProjectEntity">
-		select * from work_project
+		select p.id, p.project_name, p.user_id, u.name from work_project p inner join sys_user u on p.user_id = u.user_id
 		<where>
-			<if test="name != null and name.trim() != ''">
-				and `name` like concat('%',#{name},'%')
+			<if test="project_name != null and project_name.trim() != ''">
+				and `project_name` like concat('%',#{project_name},'%')
 			</if>
 		</where>
 		<if test="offset != null and limit != null">
@@ -18,8 +18,8 @@
 	<select id="queryTotal" resultType="int">
 		select count(*) from work_project
 		<where>
-			<if test="name != null and name.trim() != ''">
-				and `name` like concat('%',#{name},'%')
+			<if test="project_name != null and project_name.trim() != ''">
+				and `project_name` like concat('%',#{project_name},'%')
 			</if>
 		</where>
 	</select>
@@ -27,12 +27,12 @@
 	<insert id="save" parameterType="com.wind.entity.ProjectEntity">
 		insert into work_project
 		(
-		`name`,
+		`project_name`,
 		`user_id`
 		)
 		values
 		(
-		#{name},
+		#{projectName},
 		#{userId}
 		)
 	</insert>
@@ -40,7 +40,7 @@
 	<update id="update" parameterType="com.wind.entity.ProjectEntity">
 		update work_project
 		<set>
-			<if test="name != null">`name` = #{name}, </if>
+			<if test="project_name != null">`project_name` = #{projectName}, </if>
 		</set>
 		where id = #{id}
 	</update>

@@ -72,6 +72,11 @@ public class SysUserEntity implements Serializable {
 	private Integer groupId;
 
 	/**
+	 * 组名称
+	 */
+	private String groupName;
+
+	/**
 	 * 状态  0：禁用   1：正常
 	 */
 	private Integer status;
@@ -250,5 +255,14 @@ public class SysUserEntity implements Serializable {
 	public void setGroupId(Integer groupId) {
 		this.groupId = groupId;
 	}
-	
+
+	public String getGroupName() {
+		return groupName;
+	}
+
+	public void setGroupName(String groupName) {
+		this.groupName = groupName;
+	}
+
+
 }

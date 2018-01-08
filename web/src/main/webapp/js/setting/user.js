@@ -8,7 +8,7 @@ $(function () {
             { label: '名称', name: 'name', width: 75 },
 			{ label: '邮箱', name: 'email', width: 90 },
 			{ label: '手机号', name: 'mobile', width: 100 },
-            { label: '所属组', name: 'groupId', width: 100 },
+            { label: '所属组', name: 'groupName', width: 100 },
             { label: '小组负责人', name: 'leader', width: 80, formatter: function(value, options, row){
                 return value === 0 ?
                     '<span class="label label-danger">否</span>' :

@@ -4,7 +4,7 @@ $(function () {
         datatype: "json",
         colModel: [
             { label: '组ID', name: 'id', index: "id", width: 45, key: true },
-			{ label: '组名称', name: 'name', index: "name", width: 45, key: true },
+			{ label: '组名称', name: 'groupName', index: "groupName", width: 45, key: true },
         ],
 		viewrecords: true,
         height: 385,

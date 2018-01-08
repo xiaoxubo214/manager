@@ -10,11 +10,12 @@ public class ProjectEntity implements Serializable {
     private Long id;
 
     //项目名称
-    private String name;
+    private String projectName;
     //项目负责人ID
     private Long userId;
+
     //负责人名称
-    private String ownerName;
+    private String name;
 
     public Long getId() {
         return id;
@@ -32,13 +33,15 @@ public class ProjectEntity implements Serializable {
         this.userId = userId;
     }
 
-    public String getOwnerName() {
-        return ownerName;
+
+    public String getProjectName() {
+        return projectName;
     }
 
-    public void setOwnerName(String ownerName) {
-        this.ownerName = ownerName;
+    public void setProjectName(String projectName) {
+        this.projectName = projectName;
     }
+
 
     public String getName() {
         return name;
@@ -47,4 +50,5 @@ public class ProjectEntity implements Serializable {
     public void setName(String name) {
         this.name = name;
     }
+
 }

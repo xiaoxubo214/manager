@@ -27,11 +27,11 @@
 	<insert id="save" parameterType="com.wind.entity.GroupEntity">
 		insert into work_group
 		(
-		`name`
+		`group_name`
 		)
 		values
 		(
-		#{name}
+		#{groupName}
 		)
 	</insert>
 
