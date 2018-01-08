@@ -107,6 +107,7 @@ CREATE TABLE `work_standard` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `name` varchar(200) COMMENT '指标',
   `group_id` bigint(20) COMMENT 'group id',
+  `name` varchar(500) COMMENT '打分标准',
   `score` bigint(20) COMMENT '指标分数',
   PRIMARY KEY (`id`)
 ) ENGINE=`InnoDB` DEFAULT CHARACTER SET utf8 COMMENT='项目';
@@ -200,7 +201,7 @@ INSERT INTO `sys_menu` (`menu_id`, `parent_id`, `name`, `url`, `perms`, `type`, 
 INSERT INTO `sys_menu` (`menu_id`, `parent_id`, `name`, `url`, `perms`, `type`, `icon`, `order_num`) VALUES ('144', '12', '删除', NULL, 'setting:achievement:delete', '2', NULL, '0');
 
 
-INSERT INTO `sys_menu` (`menu_id`, `parent_id`, `name`, `url`, `perms`, `type`, `icon`, `order_num`) VALUES ('13', '1', '新建项目绩效', 'setting/projectachievement.html', 'setting:projectachievement:list', '1', 'fa fa-bug', '4');
+INSERT INTO `sys_menu` (`menu_id`, `parent_id`, `name`, `url`, `perms`, `type`, `icon`, `order_num`) VALUES ('13', '1', '新建项目绩效', 'setting/projectachievement.html', 'setting:project:list', '1', 'fa fa-bug', '4');
 INSERT INTO `sys_menu` (`menu_id`, `parent_id`, `name`, `url`, `perms`, `type`, `icon`, `order_num`) VALUES ('145', '13', '查看', NULL, 'setting:projectachievement:list,setting:projectachievement:info', '2', NULL, '0');
 INSERT INTO `sys_menu` (`menu_id`, `parent_id`, `name`, `url`, `perms`, `type`, `icon`, `order_num`) VALUES ('146', '13', '新增', NULL, 'setting:projectachievement:save,setting:projectachievement:select', '2', NULL, '0');
 INSERT INTO `sys_menu` (`menu_id`, `parent_id`, `name`, `url`, `perms`, `type`, `icon`, `order_num`) VALUES ('147', '13', '修改', NULL, 'setting:projectachievement:update,setting:projectachievement:select', '2', NULL, '0');

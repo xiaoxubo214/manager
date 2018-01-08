@@ -53,7 +53,7 @@ var vm = new Vue({
 		userList:{},
 		project:{
 			status:1,
-            roleIdList:[],
+            userIdList:[],
 		}
 	},
 	methods: {
@@ -64,11 +64,12 @@ var vm = new Vue({
 			vm.showList = false;
 			vm.title = "新增";
 			vm.projectList = {};
-            vm.project = {roleIdList:[]};
+            vm.project = {userIdList:[],projectId:null};
             vm.userList = {};
 			
 			//获取角色信息
 			this.getUserList();
+			this.getProjectList();
 		},
 		update: function () {
 			var projectId = getSelectedRow();
@@ -135,6 +136,11 @@ var vm = new Vue({
 				vm.userList = r.list;
 			});
 		},
+        getProjectList: function(){
+            $.get("../setting/project/select", function(r){
+                vm.projectList = r.list;
+            });
+        },
 		reload: function (event) {
 			vm.showList = true;
 			var page = $("#jqGrid").jqGrid('getGridParam','page');

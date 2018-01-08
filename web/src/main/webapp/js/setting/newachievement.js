@@ -103,7 +103,7 @@ var vm = new Vue({
 		},
 		saveOrUpdate: function (event) {
 			var url = vm.achievement.achievementId == null ? "../setting/achievement/save" : "../setting/achievement/update";
-
+			//alert(JSON.stringify(vm.achievement));
 			$.ajax({
 				type: "POST",
 			    url: url,

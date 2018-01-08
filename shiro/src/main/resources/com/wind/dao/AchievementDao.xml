@@ -4,7 +4,7 @@
 <mapper namespace="com.wind.dao.AchievementDao">
 
 	<select id="queryList" resultType="com.wind.entity.AchievementEntity">
-		select s.id,s.name,s.group_id,s.score,g.group_name from work_standard s inner join work_group g on s.group_id = g.id
+		select s.id,s.name,s.group_id,s.score,g.group_name,s.standard_desc from work_standard s inner join work_group g on s.group_id = g.id
 		<where>
 			<if test="name != null and name.trim() != ''">
 				and `name` like concat('%',#{name},'%')
@@ -29,12 +29,14 @@
 		(
 		`name`,
 		`score`,
+		`standard_desc`,
 		`group_id`
 		)
 		values
 		(
 		#{name},
 		#{score},
+		#{standardDesc},
 		#{groupId}
 		)
 	</insert>
