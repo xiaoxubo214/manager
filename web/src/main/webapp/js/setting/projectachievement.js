@@ -6,7 +6,6 @@ $(function () {
             { label: '单据编号', name: 'id', index: "id", width: 45, key: true },
 			{ label: '项目名称', name: 'projectName', index: "projectName", width: 45, key: true },
             { label: '考核人', name: 'name', index: "name", width: 45, key: true },
-            { label: '负责人', name: 'owner', index: "name", width: 45, key: true },
             { label: '开始时间', name: 'starttime', index: "starttime", width: 45, key: true },
             { label: '截止时间', name: 'endtime', index: "endtime", width: 45, key: true },
             { label: '是否结束', name: 'finish', width: 80, formatter: function(value, options, row){
@@ -54,7 +53,7 @@ var vm = new Vue({
 		userList:{},
 		project:{
 			status:1,
-            userId:null
+            roleIdList:[],
 		}
 	},
 	methods: {
@@ -65,7 +64,7 @@ var vm = new Vue({
 			vm.showList = false;
 			vm.title = "新增";
 			vm.projectList = {};
-            vm.project = {userId:null};
+            vm.project = {roleIdList:[]};
             vm.userList = {};
 			
 			//获取角色信息

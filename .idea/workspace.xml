@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="41efad8c-4260-4151-a363-2b818488b01e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/db.sql" afterPath="$PROJECT_DIR$/doc/db.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shiro/src/main/java/com/wind/controller/AchievementController.java" afterPath="$PROJECT_DIR$/shiro/src/main/java/com/wind/controller/AchievementController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/page/setting/projectachievement.html" afterPath="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/page/setting/projectachievement.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/src/main/webapp/js/setting/projectachievement.js" afterPath="$PROJECT_DIR$/web/src/main/webapp/js/setting/projectachievement.js" />
     </list>
     <ignored path="$PROJECT_DIR$/web/target/" />
     <ignored path="$PROJECT_DIR$/shiro/target/" />
@@ -34,7 +33,37 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="db.sql" pinned="false" current-in-tab="true">
+      <file leaf-file-name="projectachievement.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/src/main/webapp/WEB-INF/page/setting/projectachievement.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="276">
+              <caret line="39" column="39" lean-forward="true" selection-start-line="39" selection-start-column="39" selection-end-line="39" selection-end-column="39" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="projectachievement.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/src/main/webapp/js/setting/projectachievement.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="409">
+              <caret line="71" column="10" lean-forward="true" selection-start-line="71" selection-start-column="10" selection-end-line="71" selection-end-column="10" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="user.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/src/main/webapp/WEB-INF/page/setting/user.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="152">
+              <caret line="83" column="92" lean-forward="false" selection-start-line="83" selection-start-column="82" selection-end-line="83" selection-end-column="92" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="db.sql" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/doc/db.sql">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="317">
@@ -67,38 +96,8 @@
       <file leaf-file-name="role.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/src/main/webapp/js/setting/role.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-471">
+            <state relative-caret-position="551">
               <caret line="50" column="20" lean-forward="true" selection-start-line="50" selection-start-column="20" selection-end-line="50" selection-end-column="20" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="user.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/src/main/webapp/js/setting/user.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2357">
-              <caret line="14" column="39" lean-forward="false" selection-start-line="14" selection-start-column="39" selection-end-line="14" selection-end-column="39" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="my.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/src/main/webapp/WEB-INF/page/workspace/my.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-171">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="score.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/src/main/webapp/WEB-INF/page/workspace/score.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-609">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -107,18 +106,18 @@
       <file leaf-file-name="role.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/src/main/webapp/WEB-INF/page/setting/role.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="398">
+            <state relative-caret-position="589">
               <caret line="52" column="95" lean-forward="true" selection-start-line="52" selection-start-column="95" selection-end-line="52" selection-end-column="95" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SysRoleController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/shiro/src/main/java/com/wind/controller/SysRoleController.java">
+      <file leaf-file-name="user.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/src/main/webapp/js/setting/user.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="475">
-              <caret line="40" column="33" lean-forward="true" selection-start-line="40" selection-start-column="33" selection-end-line="40" selection-end-column="33" />
+            <state relative-caret-position="237">
+              <caret line="68" column="26" lean-forward="true" selection-start-line="68" selection-start-column="12" selection-end-line="68" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -146,7 +145,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find />
       <find>renren</find>
       <find>wind-vers</find>
       <find>query_cache</find>
@@ -169,13 +167,14 @@
       <find>projectName</find>
       <find>角色</find>
       <find>roleList</find>
-      <find>roleIdList</find>
       <find>groupList</find>
       <find>user</find>
       <find>baidu</find>
       <find>name</find>
       <find>定时</find>
       <find>管理员列表</find>
+      <find>roleIdList</find>
+      <find>userId</find>
     </findStrings>
     <dirStrings>
       <dir>renren</dir>
@@ -236,8 +235,6 @@
         <option value="$PROJECT_DIR$/web/src/main/webapp/js/setting/newproject.js" />
         <option value="$PROJECT_DIR$/web/src/main/webapp/js/setting/role.js" />
         <option value="$PROJECT_DIR$/shiro/src/main/java/com/wind/controller/ProjectAchievementController.java" />
-        <option value="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/page/setting/projectachievement.html" />
-        <option value="$PROJECT_DIR$/web/src/main/webapp/js/setting/projectachievement.js" />
         <option value="$PROJECT_DIR$/shiro/src/main/java/com/wind/entity/ProjectAchievementEntity.java" />
         <option value="$PROJECT_DIR$/shiro/src/main/java/com/wind/dao/ProjectAchievementDao.java" />
         <option value="$PROJECT_DIR$/shiro/src/main/java/com/wind/service/ProjectAchievementService.java" />
@@ -245,6 +242,8 @@
         <option value="$PROJECT_DIR$/doc/data.sql" />
         <option value="$PROJECT_DIR$/shiro/src/main/java/com/wind/controller/AchievementController.java" />
         <option value="$PROJECT_DIR$/doc/db.sql" />
+        <option value="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/page/setting/projectachievement.html" />
+        <option value="$PROJECT_DIR$/web/src/main/webapp/js/setting/projectachievement.js" />
       </list>
     </option>
   </component>
@@ -1049,19 +1048,19 @@
       <workItem from="1514977685239" duration="2169000" />
       <workItem from="1515033057678" duration="4461000" />
       <workItem from="1515052575715" duration="3691000" />
-      <workItem from="1515380455956" duration="10275000" />
+      <workItem from="1515380455956" duration="11133000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="100282000" />
+    <option name="totallyTimeSpent" value="101140000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="DB Execution Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1904762" sideWeight="0.497921" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="DB Execution Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1904762" sideWeight="0.497921" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4009434" sideWeight="0.2572765" order="15" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991362" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
@@ -1079,7 +1078,7 @@
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.12592593" sideWeight="0.74272346" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27089947" sideWeight="0.74272346" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32919255" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="FAQ Robot" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
@@ -1319,13 +1318,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/src/main/webapp/WEB-INF/page/setting/user.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="447">
-          <caret line="97" column="44" lean-forward="true" selection-start-line="97" selection-start-column="44" selection-end-line="97" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/shiro/src/main/java/com/wind/entity/AchievementEntity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="779">
@@ -1413,6 +1405,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="7" column="82" lean-forward="false" selection-start-line="7" selection-start-column="82" selection-end-line="7" selection-end-column="82" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1424,13 +1417,6 @@
             <marker date="1515036787572" expanded="true" signature="945:1054" ph="insert into work_project... " />
             <marker date="1515036787572" expanded="true" signature="1137:1266" ph="update work_... " />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/src/main/webapp/js/setting/projectachievement.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="11" selection-end-column="97" />
         </state>
       </provider>
     </entry>
@@ -1494,14 +1480,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/src/main/webapp/WEB-INF/page/setting/projectachievement.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="94">
-          <caret line="20" column="64" lean-forward="false" selection-start-line="20" selection-start-column="64" selection-end-line="20" selection-end-column="64" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/shiro/src/main/java/com/wind/controller/GroupController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
@@ -1534,14 +1512,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/src/main/webapp/WEB-INF/page/setting/role.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="398">
-          <caret line="52" column="95" lean-forward="true" selection-start-line="52" selection-start-column="95" selection-end-line="52" selection-end-column="95" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/src/main/webapp/WEB-INF/page/workspace/my.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-171">
@@ -1566,30 +1536,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/src/main/webapp/js/setting/role.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-471">
-          <caret line="50" column="20" lean-forward="true" selection-start-line="50" selection-start-column="20" selection-end-line="50" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/src/main/webapp/js/setting/user.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2357">
-          <caret line="14" column="39" lean-forward="false" selection-start-line="14" selection-start-column="39" selection-end-line="14" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/src/main/webapp/WEB-INF/page/setting/newachievement.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="836">
-          <caret line="44" column="61" lean-forward="false" selection-start-line="44" selection-start-column="61" selection-end-line="44" selection-end-column="61" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/shiro/src/main/java/com/wind/controller/AchievementController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-20">
@@ -1610,6 +1556,62 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="317">
           <caret line="125" column="0" lean-forward="false" selection-start-line="125" selection-start-column="0" selection-end-line="134" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/src/main/webapp/WEB-INF/page/setting/newachievement.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="836">
+          <caret line="44" column="61" lean-forward="false" selection-start-line="44" selection-start-column="61" selection-end-line="44" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/src/main/webapp/js/setting/role.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="551">
+          <caret line="50" column="20" lean-forward="true" selection-start-line="50" selection-start-column="20" selection-end-line="50" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/src/main/webapp/WEB-INF/page/setting/role.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="589">
+          <caret line="52" column="95" lean-forward="true" selection-start-line="52" selection-start-column="95" selection-end-line="52" selection-end-column="95" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/src/main/webapp/WEB-INF/page/setting/user.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="83" column="92" lean-forward="false" selection-start-line="83" selection-start-column="82" selection-end-line="83" selection-end-column="92" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/src/main/webapp/js/setting/user.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="237">
+          <caret line="68" column="26" lean-forward="true" selection-start-line="68" selection-start-column="12" selection-end-line="68" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/src/main/webapp/js/setting/projectachievement.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="409">
+          <caret line="71" column="10" lean-forward="true" selection-start-line="71" selection-start-column="10" selection-end-line="71" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/src/main/webapp/WEB-INF/page/setting/projectachievement.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="39" column="39" lean-forward="true" selection-start-line="39" selection-start-column="39" selection-end-line="39" selection-end-column="39" />
           <folding />
         </state>
       </provider>
