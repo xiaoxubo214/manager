@@ -28,7 +28,7 @@ public class AchievementController extends AbstractController {
     @Autowired
     private AchievementService achievementService;
     /**
-     * 所有组列表
+     * 所有绩效列表
      */
     @RequestMapping("/list")
     @RequiresPermissions("setting:achievement:list")

@@ -116,11 +116,24 @@ CREATE TABLE `work_achievement` (
   `project_name` varchar(200) COMMENT '项目名称',
   `user_id` bigint(20) COMMENT 'user id',
   `owner_id` bigint(20) COMMENT 'owner id',
+  `total_score` bigint(20) COMMENT 'user total score',
   `start_time` bigint(20) COMMENT '开始时间',
   `end_time` bigint(20) COMMENT '开始时间',
   `finish` tinyint DEFAULT 0 COMMENT '状态   0：未完成   1：完成',
   PRIMARY KEY (`id`)
 ) ENGINE=`InnoDB` DEFAULT CHARACTER SET utf8 COMMENT='项目绩效';
+
+CREATE TABLE `work_achievement_item` (
+  `item_id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `achievement_id` bigint(20) COMMENT '绩效项ID',
+  `project_name` varchar(200) COMMENT '项目名称',
+  `user_id` bigint(20) COMMENT 'user id',
+  `owner_id` bigint(20) COMMENT 'owner id',
+  `plan_score` bigint(20) COMMENT 'owner id',
+  `get_score` bigint(20) COMMENT 'owner id',
+  PRIMARY KEY (`item_id`)
+) ENGINE=`InnoDB` DEFAULT CHARACTER SET utf8 COMMENT='项目绩效子项';
+
 
 -- 初始数据
 INSERT INTO `sys_user` (`user_id`, `username`, `password`, `email`, `mobile`, `status`, `create_user_id`, `create_time`) VALUES ('1', 'admin', '8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918', 'root@shbaoyuantech.com', '15102115465', '1', '1', '2016-11-11 11:11:11');
