@@ -39,7 +39,7 @@
 				<div class="col-sm-2 control-label">负责人</div>
 				<div class="col-sm-10">
 					<label v-for="user in userList" class="checkbox-inline">
-						<input type="radio" :value="user.userId" v-model="project.userId">{{user.name}}
+						<input type="radio" :value="user.userId" v-model="project.ownerId">{{user.name}}
 					</label>
 				</div>
 			</div>

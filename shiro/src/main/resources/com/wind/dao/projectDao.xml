@@ -4,7 +4,7 @@
 <mapper namespace="com.wind.dao.ProjectDao">
 
 	<select id="queryList" resultType="com.wind.entity.ProjectEntity">
-		select p.id, p.project_name, p.user_id, u.name from work_project p inner join sys_user u on p.user_id = u.user_id
+		select p.id, p.project_name, p.owner_id, u.name from work_project p inner join sys_user u on p.owner_id = u.user_id
 		<where>
 			<if test="project_name != null and project_name.trim() != ''">
 				and `project_name` like concat('%',#{project_name},'%')
@@ -28,12 +28,12 @@
 		insert into work_project
 		(
 		`project_name`,
-		`user_id`
+		`owner_id`
 		)
 		values
 		(
 		#{projectName},
-		#{userId}
+		#{ownerId}
 		)
 	</insert>
 

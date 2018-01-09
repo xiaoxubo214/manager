@@ -1,7 +1,9 @@
 package com.wind.controller;
 
 import com.wind.annotation.SysLog;
+import com.wind.entity.ProjectAchievementEntity;
 import com.wind.entity.ProjectEntity;
+import com.wind.service.ProjectAchievementService;
 import com.wind.service.ProjectService;
 import com.wind.utils.Constant;
 import com.wind.utils.PageUtils;
@@ -24,7 +26,7 @@ import java.util.Map;
 @RequestMapping("/setting/projectachievement")
 public class ProjectAchievementController extends AbstractController {
     @Autowired
-    private ProjectService projectService;
+    private ProjectAchievementService projectAchievementService;
     /**
      * 所有组列表
      */
@@ -38,8 +40,8 @@ public class ProjectAchievementController extends AbstractController {
 
         //查询列表数据
         Query query = new Query(params);
-        List<ProjectEntity> groupList = projectService.queryList(query);
-        int total = projectService.queryTotal(query);
+        List<ProjectAchievementEntity> groupList = projectAchievementService.queryList(query);
+        int total = projectAchievementService.queryTotal(query);
 
         PageUtils pageUtil = new PageUtils(groupList, total, query.getLimit(), query.getPage());
 
@@ -63,11 +65,14 @@ public class ProjectAchievementController extends AbstractController {
     @SysLog("新建项目")
     @RequestMapping("/save")
     @RequiresPermissions("setting:projectachievement:save")
-    public R save(@RequestBody ProjectEntity projectEntity){
-        ValidatorUtils.validateEntity(projectEntity, ProjectEntity.class);
+    public R save(@RequestBody ProjectAchievementEntity projectAchievementEntity){
+        ValidatorUtils.validateEntity(projectAchievementEntity, ProjectAchievementEntity.class);
 
         //g.setCreateUserId(getUserId());
-        projectService.save(projectEntity);
+        for(Long userId:projectAchievementEntity.getUserIdList()) {
+            projectAchievementEntity.setUserId(userId);
+            projectAchievementService.save(projectAchievementEntity);
+        }
 
         return R.ok();
     }
@@ -78,11 +83,11 @@ public class ProjectAchievementController extends AbstractController {
     @SysLog("修改项目")
     @RequestMapping("/update")
     @RequiresPermissions("setting:projectachievement:update")
-    public R update(@RequestBody ProjectEntity projectEntity){
-        ValidatorUtils.validateEntity(projectEntity, ProjectEntity.class);
+    public R update(@RequestBody ProjectAchievementEntity projectAchievementEntity){
+        ValidatorUtils.validateEntity(projectAchievementEntity, ProjectAchievementEntity.class);
 
         //user.setCreateUserId(getUserId());
-        projectService.update(projectEntity);
+        projectAchievementService.update(projectAchievementEntity);
 
         return R.ok();
     }
@@ -102,7 +107,7 @@ public class ProjectAchievementController extends AbstractController {
             return R.error("不能删除");
         }*/
 
-        projectService.deleteBatch(projectIds);
+        projectAchievementService.deleteBatch(projectIds);
 
         return R.ok();
     }

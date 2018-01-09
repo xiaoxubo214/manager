@@ -3,6 +3,7 @@ package com.wind.controller;
 import com.wind.annotation.SysLog;
 import com.wind.entity.GroupEntity;
 import com.wind.entity.ProjectEntity;
+import com.wind.entity.SysUserEntity;
 import com.wind.service.GroupService;
 import com.wind.service.ProjectService;
 import com.wind.utils.Constant;
@@ -18,6 +19,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -47,6 +49,24 @@ public class ProjectController extends AbstractController {
 
         return R.ok().put("page", pageUtil);
     }
+
+    /**
+     * 角色列表
+     */
+    @RequestMapping("/select")
+    @RequiresPermissions("setting:project:select")
+    public R select(){
+        Map<String, Object> map = new HashMap<>();
+
+        //如果不是超级管理员，则只查询自己所拥有的角色列表
+        if(getUserId() != Constant.SUPER_ADMIN){
+            map.put("createUserId", getUserId());
+        }
+        List<ProjectEntity> list = projectService.queryList(map);
+
+        return R.ok().put("list", list);
+    }
+
 
     /**
      * 获取登录的用户信息

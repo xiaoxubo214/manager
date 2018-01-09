@@ -114,9 +114,8 @@ CREATE TABLE `work_standard` (
 
 CREATE TABLE `work_achievement` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `project_name` varchar(200) COMMENT '项目名称',
+  `project_id` bigint(20) COMMENT 'project id',
   `user_id` bigint(20) COMMENT 'user id',
-  `owner_id` bigint(20) COMMENT 'owner id',
   `total_score` bigint(20) COMMENT 'user total score',
   `start_time` bigint(20) COMMENT '开始时间',
   `end_time` bigint(20) COMMENT '开始时间',
@@ -127,9 +126,6 @@ CREATE TABLE `work_achievement` (
 CREATE TABLE `work_achievement_item` (
   `item_id` bigint(20) NOT NULL AUTO_INCREMENT,
   `achievement_id` bigint(20) COMMENT '绩效项ID',
-  `project_name` varchar(200) COMMENT '项目名称',
-  `user_id` bigint(20) COMMENT 'user id',
-  `owner_id` bigint(20) COMMENT 'owner id',
   `plan_score` bigint(20) COMMENT 'owner id',
   `get_score` bigint(20) COMMENT 'owner id',
   PRIMARY KEY (`item_id`)
@@ -195,13 +191,13 @@ INSERT INTO `sys_menu` (`menu_id`, `parent_id`, `name`, `url`, `perms`, `type`, 
 INSERT INTO `sys_menu` (`menu_id`, `parent_id`, `name`, `url`, `perms`, `type`, `icon`, `order_num`) VALUES ('140', '11', '删除', NULL, 'setting:project:delete', '2', NULL, '0');
 
 INSERT INTO `sys_menu` (`menu_id`, `parent_id`, `name`, `url`, `perms`, `type`, `icon`, `order_num`) VALUES ('12', '1', '新建绩效标准', 'setting/newachievement.html', NULL, '1', 'fa fa-bug', '4');
-INSERT INTO `sys_menu` (`menu_id`, `parent_id`, `name`, `url`, `perms`, `type`, `icon`, `order_num`) VALUES ('141', '12', '查看', NULL, 'setting:achievement:list,setting:achievement:info', '2', NULL, '0');
-INSERT INTO `sys_menu` (`menu_id`, `parent_id`, `name`, `url`, `perms`, `type`, `icon`, `order_num`) VALUES ('142', '12', '新增', NULL, 'setting:achievement:save,setting:achievement:select', '2', NULL, '0');
-INSERT INTO `sys_menu` (`menu_id`, `parent_id`, `name`, `url`, `perms`, `type`, `icon`, `order_num`) VALUES ('143', '12', '修改', NULL, 'setting:achievement:update,setting:achievement:select', '2', NULL, '0');
-INSERT INTO `sys_menu` (`menu_id`, `parent_id`, `name`, `url`, `perms`, `type`, `icon`, `order_num`) VALUES ('144', '12', '删除', NULL, 'setting:achievement:delete', '2', NULL, '0');
+INSERT INTO `sys_menu` (`menu_id`, `parent_id`, `name`, `url`, `perms`, `type`, `icon`, `order_num`) VALUES ('141', '12', '查看', NULL, 'setting:projectachievement:list,setting:projectachievement:info', '2', NULL, '0');
+INSERT INTO `sys_menu` (`menu_id`, `parent_id`, `name`, `url`, `perms`, `type`, `icon`, `order_num`) VALUES ('142', '12', '新增', NULL, 'setting:projectachievement:save,setting:projectachievement:select', '2', NULL, '0');
+INSERT INTO `sys_menu` (`menu_id`, `parent_id`, `name`, `url`, `perms`, `type`, `icon`, `order_num`) VALUES ('143', '12', '修改', NULL, 'setting:projectachievement:update,setting:projectachievement:select', '2', NULL, '0');
+INSERT INTO `sys_menu` (`menu_id`, `parent_id`, `name`, `url`, `perms`, `type`, `icon`, `order_num`) VALUES ('144', '12', '删除', NULL, 'setting:projectachievement:delete', '2', NULL, '0');
 
 
-INSERT INTO `sys_menu` (`menu_id`, `parent_id`, `name`, `url`, `perms`, `type`, `icon`, `order_num`) VALUES ('13', '1', '新建项目绩效', 'setting/projectachievement.html', 'setting:project:list', '1', 'fa fa-bug', '4');
+INSERT INTO `sys_menu` (`menu_id`, `parent_id`, `name`, `url`, `perms`, `type`, `icon`, `order_num`) VALUES ('13', '1', '新建项目绩效', 'setting/projectachievement.html', 'setting:project:select', '1', 'fa fa-bug', '4');
 INSERT INTO `sys_menu` (`menu_id`, `parent_id`, `name`, `url`, `perms`, `type`, `icon`, `order_num`) VALUES ('145', '13', '查看', NULL, 'setting:projectachievement:list,setting:projectachievement:info', '2', NULL, '0');
 INSERT INTO `sys_menu` (`menu_id`, `parent_id`, `name`, `url`, `perms`, `type`, `icon`, `order_num`) VALUES ('146', '13', '新增', NULL, 'setting:projectachievement:save,setting:projectachievement:select', '2', NULL, '0');
 INSERT INTO `sys_menu` (`menu_id`, `parent_id`, `name`, `url`, `perms`, `type`, `icon`, `order_num`) VALUES ('147', '13', '修改', NULL, 'setting:projectachievement:update,setting:projectachievement:select', '2', NULL, '0');

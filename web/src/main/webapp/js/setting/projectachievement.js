@@ -1,11 +1,12 @@
 $(function () {
     $("#jqGrid").jqGrid({
-        url: '../setting/project/list',
+        url: '../setting/projectachievement/list',
         datatype: "json",
         colModel: [
             { label: '单据编号', name: 'id', index: "id", width: 45, key: true },
 			{ label: '项目名称', name: 'projectName', index: "projectName", width: 45, key: true },
-            { label: '考核人', name: 'name', index: "name", width: 45, key: true },
+            { label: '考核人', name: 'ownerName', index: "OwnerName", width: 45, key: true },
+            { label: '被考核人', name: 'workName', index: "workName", width: 45, key: true },
             { label: '开始时间', name: 'starttime', index: "starttime", width: 45, key: true },
             { label: '截止时间', name: 'endtime', index: "endtime", width: 45, key: true },
             { label: '是否结束', name: 'finish', width: 80, formatter: function(value, options, row){
@@ -93,7 +94,7 @@ var vm = new Vue({
 			confirm('确定要删除选中的记录？', function(){
 				$.ajax({
 					type: "POST",
-				    url: "../setting/project/delete",
+				    url: "../setting/projectachievement/delete",
                     contentType: "application/json",
 				    data: JSON.stringify(projectIds),
 				    success: function(r){
@@ -109,7 +110,7 @@ var vm = new Vue({
 			});
 		},
 		saveOrUpdate: function (event) {
-			var url = vm.project.projectId == null ? "../setting/project/save" : "../setting/project/update";
+			var url = vm.project.id == null ? "../setting/projectachievement/save" : "../setting/projectachievement/update";
 			$.ajax({
 				type: "POST",
 			    url: url,
@@ -127,7 +128,7 @@ var vm = new Vue({
 			});
 		},
 		getProject: function(projectId){
-			$.get("../setting/project/info/"+projectId, function(r){
+			$.get("../setting/projectachievement/info/"+projectId, function(r){
 				vm.project = r.project;
 			});
 		},

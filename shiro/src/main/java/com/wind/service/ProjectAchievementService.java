@@ -1,5 +1,6 @@
 package com.wind.service;
 
+import com.wind.entity.ProjectAchievementEntity;
 import com.wind.entity.ProjectEntity;
 
 import java.util.List;
@@ -7,11 +8,11 @@ import java.util.Map;
 
 public interface ProjectAchievementService {
 
-    List<ProjectEntity> queryList(Map<String, Object> map);
+    List<ProjectAchievementEntity> queryList(Map<String, Object> map);
 
-    void save(ProjectEntity projectEntity);
+    void save(ProjectAchievementEntity projectAchievementEntity);
 
-    void update(ProjectEntity projectEntity);
+    void update(ProjectAchievementEntity projectAchievementEntity);
 
     void deleteBatch(Long[] projectIds);
 

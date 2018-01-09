@@ -1,12 +1,14 @@
 package com.wind.entity;
 
 import java.io.Serializable;
+import java.util.Date;
+import java.util.List;
 
-public class ProjectAchievementEntity implements Serializable {
+public class ProjectAchievementEntity implements Serializable,Cloneable {
 
     private static final long serialVersionUID = 1L;
 
-    //项目ID
+    //ID
     private Long id;
 
     //项目名称
@@ -14,15 +16,24 @@ public class ProjectAchievementEntity implements Serializable {
     //项目负责人ID
     private Long userId;
 
-    //负责人名称
-    private String name;
+    //项目参与人员列表
+    private List<Long> userIdList;
+
+    //项目ID
+    private Long projectId;
+
+    //打分人名字
+    private String ownerName;
+
+    //被打分人名字
+    private String workName;
 
     //是否完成 1 finish
     //0 not finish
     private Integer finish;
 
-    private String startTime;
-    private String endTime;
+    private Date startTime;
+    private Date endTime;
 
     public Long getId() {
         return id;
@@ -48,12 +59,20 @@ public class ProjectAchievementEntity implements Serializable {
         this.userId = userId;
     }
 
-    public String getName() {
-        return name;
+    public String getOwnerName() {
+        return ownerName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setOwnerName(String ownerName) {
+        this.ownerName = ownerName;
+    }
+
+    public String getWorkName() {
+        return workName;
+    }
+
+    public void setWorkName(String workName) {
+        this.workName = workName;
     }
 
     public Integer getFinish() {
@@ -64,19 +83,37 @@ public class ProjectAchievementEntity implements Serializable {
         this.finish = finish;
     }
 
-    public String getStartTime() {
+    public Date getStartTime() {
         return startTime;
     }
 
-    public void setStartTime(String startTime) {
+    public void setStartTime(Date startTime) {
         this.startTime = startTime;
     }
 
-    public String getEndTime() {
+    public Date getEndTime() {
         return endTime;
     }
 
-    public void setEndTime(String endTime) {
+    public void setEndTime(Date endTime) {
         this.endTime = endTime;
     }
+
+    public Long getProjectId() {
+        return projectId;
+    }
+
+    public void setProjectId(Long projectId) {
+        this.projectId = projectId;
+    }
+
+
+    public List<Long> getUserIdList() {
+        return userIdList;
+    }
+
+    public void setUserIdList(List<Long> userIdList) {
+        this.userIdList = userIdList;
+    }
+
 }
