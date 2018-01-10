@@ -49,6 +49,16 @@ public class ProjectAchievementController extends AbstractController {
     }
 
     /**
+     * 所有组列表
+     */
+    @RequestMapping("/content")
+    @RequiresPermissions("setting:projectachievement:content")
+    public R content(@RequestBody ProjectAchievementEntity projectAchievementEntity){
+        ProjectAchievementEntity pe = projectAchievementService.queryObject(projectAchievementEntity.getId());
+        return R.ok().put("pe",pe);
+    }
+
+    /**
      * 获取登录的用户信息
      */
     @RequestMapping("/info")

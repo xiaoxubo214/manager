@@ -38,6 +38,8 @@ public class ProjectAchievementEntity implements Serializable {
 
 	private String projectName;
 
+	private List<AchievementEntity> achievementEntityList;
+
 	/**
 	 * 设置：
 	 */
@@ -153,5 +155,13 @@ public class ProjectAchievementEntity implements Serializable {
 
     public void setProjectName(String projectName) {
         this.projectName = projectName;
+    }
+
+    public List<AchievementEntity> getAchievementEntityList() {
+        return achievementEntityList;
+    }
+
+    public void setAchievementEntityList(List<AchievementEntity> achievementEntityList) {
+        this.achievementEntityList = achievementEntityList;
     }
 }
