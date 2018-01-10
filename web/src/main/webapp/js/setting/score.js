@@ -3,25 +3,24 @@ $(function () {
         url: '../setting/projectachievement/list',
         datatype: "json",
         colModel: [
-            { label: '单据ID', name: 'itemId', width: 45, key: true },
-            { label: '项目名称', name: 'projectName', width: 75 },
-            { label: '考核人', name: 'ownerName', width: 75 },
-            { label: '被考核人', name: 'workName', width: 90 },
-            { label: '开始时间', name: 'startTime', width: 90 },
-            { label: '截止时间', name: 'endTime', width: 90 },
+            { label: '单据编号', name: 'id', index: "id", width: 45, key: true },
+			{ label: '项目名称', name: 'projectName', index: "projectName", width: 45, key: true },
+            { label: '考核人', name: 'ownerName', index: "OwnerName", width: 45, key: true },
+            { label: '被考核人', name: 'workName', index: "workName", width: 45, key: true },
+            { label: '开始时间', name: 'startTime', index: "starTime", width: 45, key: true },
+            { label: '截止时间', name: 'endTime', index: "endTime", width: 45, key: true },
             { label: '是否结束', name: 'finish', width: 80, formatter: function(value, options, row){
                 return value === 0 ?
                     '<span class="label label-danger">否</span>' :
                     '<span class="label label-success">是</span>';
             }},
-
         ],
-        viewrecords: true,
+		viewrecords: true,
         height: 385,
         rowNum: 10,
-        rowList : [10,30,50],
-        rownumbers: true,
-        rownumWidth: 25,
+		rowList : [10,30,50],
+        rownumbers: true, 
+        rownumWidth: 25, 
         autowidth:true,
         multiselect: true,
         pager: "#jqGridPager",
@@ -32,13 +31,13 @@ $(function () {
             records: "page.totalCount"
         },
         prmNames : {
-            page:"page",
-            rows:"limit",
+            page:"page", 
+            rows:"limit", 
             order: "order"
         },
         gridComplete:function(){
-            //隐藏grid底部滚动条
-            $("#jqGrid").closest(".ui-jqgrid-bdiv").css({ "overflow-x" : "hidden" });
+        	//隐藏grid底部滚动条
+        	$("#jqGrid").closest(".ui-jqgrid-bdiv").css({ "overflow-x" : "hidden" }); 
         }
     });
 });

@@ -1,13 +1,15 @@
 package com.wind.dao;
 
 import com.wind.entity.ProjectAchievementEntity;
-import com.wind.entity.ProjectEntity;
 
-import java.util.List;
-
+/**
+ * 项目绩效
+ * 
+ * @author chenshun
+ * @email sunlightcs@gmail.com
+ * @date 2018-01-10 10:00:55
+ */
 public interface ProjectAchievementDao extends BaseDao<ProjectAchievementEntity> {
-
-    ProjectAchievementEntity queryById(String id);
-
-    List<ProjectAchievementEntity> queryAll();
+    public Long getSaveKey(ProjectAchievementEntity projectAchievementEntity);
+	
 }

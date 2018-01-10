@@ -3,14 +3,25 @@
 
 <mapper namespace="com.wind.dao.ProjectAchievementDao">
 
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.wind.entity.ProjectAchievementEntity" id="projectAchievementMap">
+        <result property="id" column="id"/>
+        <result property="projectId" column="project_id"/>
+        <result property="userId" column="user_id"/>
+        <result property="totalScore" column="total_score"/>
+        <result property="startTime" column="start_time"/>
+        <result property="endTime" column="end_time"/>
+        <result property="finish" column="finish"/>
+    </resultMap>
+
 	<select id="queryObject" resultType="com.wind.entity.ProjectAchievementEntity">
 		select * from work_achievement where id = #{value}
 	</select>
 
 	<select id="queryList" resultType="com.wind.entity.ProjectAchievementEntity">
-		select t1.id,t1.name work_name,t1.finish,t2.project_name,t2.owner_id,t2.name owner_name from
+		select t1.id,t1.name work_name,t1.finish,t1.start_time,t1.end_time,t2.project_name,t2.owner_id,t2.name owner_name from
 		(
-		select wa.id,wa.user_id,wa.finish,wa.project_id,su1.name
+		select wa.id,wa.user_id,wa.finish,wa.project_id,wa.start_time,wa.end_time,su1.name
 		from work_achievement wa
 		inner join sys_user su1 on wa.user_id = su1.user_id
 		) t1
@@ -21,43 +32,72 @@
 		inner join sys_user su on wp.owner_id = su.user_id
 		) t2
 		on t1.project_id = t2.id
-        <choose>
-            <when test="sidx != null and sidx.trim() != ''">
-                order by ${sidx} ${order}
-            </when>
+		<where>
+			<if test="ownerId != null">
+				and `owner_id` like concat('%',#{ownerId},'%')
+			</if>
+		</where>
+		<choose>
+			<when test="sidx != null and sidx.trim() != ''">
+				order by ${sidx} ${order}
+			</when>
 			<otherwise>
-                order by id asc
+				order by id desc
 			</otherwise>
-        </choose>
+		</choose>
 		<if test="offset != null and limit != null">
 			limit #{offset}, #{limit}
 		</if>
 	</select>
 	
  	<select id="queryTotal" resultType="int">
-		select count(*) from work_achievement 
+		select count(*) from work_achievement
 	</select>
 	 
 	<insert id="save" parameterType="com.wind.entity.ProjectAchievementEntity">
 		insert into work_achievement
 		(
-			`user_id`, 
-			`project_id`
+			`project_id`, 
+			`user_id`,
+			`start_time`, 
+			`end_time`
 		)
 		values
 		(
-			#{userId}, 
-			#{projectId}
+			#{projectId}, 
+			#{userId},
+			#{startTime}, 
+			#{endTime}
 		)
+	</insert>
+
+	<insert id="getSaveKey" parameterType="com.wind.entity.ProjectAchievementEntity" useGeneratedKeys="true" keyProperty="id">
+		insert into work_achievement
+		(
+		`project_id`,
+		`user_id`,
+		`start_time`,
+		`end_time`
+		)
+		values
+		(
+		#{projectId},
+		#{userId},
+		#{startTime},
+		#{endTime}
+		)
+
 	</insert>
 	 
 	<update id="update" parameterType="com.wind.entity.ProjectAchievementEntity">
-		update work_achievement 
+		update work_achievement
 		<set>
-			<if test="userId != null">`user_id` = #{userId}, </if>
 			<if test="projectId != null">`project_id` = #{projectId}, </if>
+			<if test="userId != null">`user_id` = #{userId}, </if>
+			<if test="totalScore != null">`total_score` = #{totalScore}, </if>
 			<if test="startTime != null">`start_time` = #{startTime}, </if>
 			<if test="endTime != null">`end_time` = #{endTime}, </if>
+			<if test="finish != null">`finish` = #{finish}</if>
 		</set>
 		where id = #{id}
 	</update>
@@ -67,7 +107,7 @@
 	</delete>
 	
 	<delete id="deleteBatch">
-		delete from work_achievement where id in 
+		delete from work_achievement where id in
 		<foreach item="id" collection="array" open="(" separator="," close=")">
 			#{id}
 		</foreach>

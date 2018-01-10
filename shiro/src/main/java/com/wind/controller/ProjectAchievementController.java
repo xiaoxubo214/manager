@@ -35,7 +35,7 @@ public class ProjectAchievementController extends AbstractController {
     public R list(@RequestParam Map<String, Object> params){
         //只有超级管理员，才能查看所有管理员列表
         if(getUserId() != Constant.SUPER_ADMIN){
-            params.put("createUserId", getUserId());
+            params.put("ownerId", getUserId());
         }
 
         //查询列表数据
@@ -71,7 +71,7 @@ public class ProjectAchievementController extends AbstractController {
         //g.setCreateUserId(getUserId());
         for(Long userId:projectAchievementEntity.getUserIdList()) {
             projectAchievementEntity.setUserId(userId);
-            projectAchievementService.save(projectAchievementEntity);
+            projectAchievementService.getSaveKey(projectAchievementEntity);
         }
 
         return R.ok();

@@ -117,8 +117,8 @@ CREATE TABLE `work_achievement` (
   `project_id` bigint(20) COMMENT 'project id',
   `user_id` bigint(20) COMMENT 'user id',
   `total_score` bigint(20) COMMENT 'user total score',
-  `start_time` bigint(20) COMMENT '开始时间',
-  `end_time` bigint(20) COMMENT '开始时间',
+  `start_time` date COMMENT '开始时间',
+  `end_time` date(20) COMMENT '开始时间',
   `finish` tinyint DEFAULT 0 COMMENT '状态   0：未完成   1：完成',
   PRIMARY KEY (`id`)
 ) ENGINE=`InnoDB` DEFAULT CHARACTER SET utf8 COMMENT='项目绩效';
@@ -126,7 +126,6 @@ CREATE TABLE `work_achievement` (
 CREATE TABLE `work_achievement_item` (
   `item_id` bigint(20) NOT NULL AUTO_INCREMENT,
   `achievement_id` bigint(20) COMMENT '绩效项ID',
-  `plan_score` bigint(20) COMMENT 'owner id',
   `get_score` bigint(20) COMMENT 'owner id',
   PRIMARY KEY (`item_id`)
 ) ENGINE=`InnoDB` DEFAULT CHARACTER SET utf8 COMMENT='项目绩效子项';
