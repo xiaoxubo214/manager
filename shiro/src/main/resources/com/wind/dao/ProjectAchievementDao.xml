@@ -19,9 +19,9 @@
 	</select>
 
 	<select id="queryList" resultType="com.wind.entity.ProjectAchievementEntity">
-		select t1.id,t1.user_id,t1.name work_name,t1.finish,t1.start_time,t1.end_time,t2.project_name,t2.owner_id,t2.name owner_name from
+		select t1.id,t1.user_id,t1.name work_name,t1.finish,t1.start_time,t1.end_time,t1.total_score,t2.project_name,t2.owner_id,t2.name owner_name from
 		(
-		select wa.id,wa.user_id,wa.finish,wa.project_id,wa.start_time,wa.end_time,su1.name
+		select wa.id,wa.user_id,wa.finish,wa.project_id,wa.start_time,wa.end_time,su1.name,wa.total_score
 		from work_achievement wa
 		inner join sys_user su1 on wa.user_id = su1.user_id
 		) t1

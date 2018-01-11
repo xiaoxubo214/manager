@@ -7,9 +7,10 @@ $(function () {
             { label: '项目名称', name: 'projectName', width: 75 },
             { label: '考核人', name: 'ownerName', width: 75 },
             { label: '被考核人', name: 'workName', width: 90 },
+            { label: '得分', name: 'totalScore', width: 90 },
             { label: '开始时间', name: 'startTime', width: 90 },
             { label: '截止时间', name: 'endTime', width: 90 },
-            { label: '是否结束', name: 'finish', width: 80, formatter: function(value, options, row){
+            { label: '是否完成', name: 'finish', width: 80, formatter: function(value, options, row){
                 return value === 0 ?
                     '<span class="label label-danger">否</span>' :
                     '<span class="label label-success">是</span>';
@@ -73,6 +74,7 @@ var vm = new Vue({
             this.getProjectAchievementContent(id);
             vm.showList = false;
             vm.title = "打分";
+            vm.pac = [];
         },
         del: function () {
             var projectIds = getSelectedRows();
@@ -99,16 +101,18 @@ var vm = new Vue({
             });
         },
         saveOrUpdate: function (event) {
-            //var url = vm.project.id == null ? "../setting/projectachievement/save" : "../setting/projectachievement/update";
-            for(var i=0;i<projectAchievementScore.achievementEntityList.length;i++){
-            <projectAchievementScore.achievementEntityList[i].score = vm.pac[i];
+            //var url = vm.project.id == null ? "../setting/projectachievement/savescore" : "../setting/projectachievement/update";
+            for(var i=0;i <(vm.projectAchievementScore.achievementEntityList).length;i++){
+                vm.projectAchievementScore.achievementEntityList[i].score = vm.pac[i];
             }
-            alert( JSON.stringify(vm.pac));
-            /*$.ajax({
+            //alert(JSON.stringify(vm.pac));
+            this.calculation();
+            //alert( JSON.stringify(vm.projectAchievementScore));
+            $.ajax({
                 type: "POST",
-                url: url,
+                url: "../setting/projectachievement/savescore",
                 contentType: "application/json",
-                data: JSON.stringify(vm.project),
+                data: JSON.stringify(vm.projectAchievementScore),
                 success: function(r){
                     if(r.code === 0){
                         alert('操作成功', function(index){
@@ -118,7 +122,7 @@ var vm = new Vue({
                         alert(r.msg);
                     }
                 }
-            });*/
+            });
         },
         getProject: function(projectId){
             $.get("../setting/projectachievement/info/"+projectId, function(r){
@@ -147,7 +151,12 @@ var vm = new Vue({
             }).trigger("reloadGrid");
         },
         calculation: function (event) {
-            //vm.total =
+          /* vm.total = 0;
+            for(var i=1;i <=vm.pac.length;i++) {
+                //vm.total = vm.total + parseInt(vm.pac[i]);
+                alert("总分" +  vm.pac[i]);
+            }
+            //alert("总分" +  vm.total);*/
         }
     }
 });

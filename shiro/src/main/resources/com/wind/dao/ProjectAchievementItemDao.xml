@@ -29,14 +29,12 @@
 	<insert id="save" parameterType="com.wind.entity.ProjectAchievementItemEntity">
 		insert into work_achievement_item
 		(
-			`achievement_id`, 
-			`plan_score`, 
+			`achievement_id`,
 			`get_score`
 		)
 		values
 		(
-			#{achievementId}, 
-			#{planScore}, 
+			#{achievementId},
 			#{getScore}
 		)
 	</insert>

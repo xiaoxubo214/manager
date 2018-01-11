@@ -60,7 +60,7 @@
 					<div class="col-sm-2 control-label">打分：</div>
 					<div class="col-sm-10">
 						<label class="checkbox-inline">
-							<input type="text" class="form-control" name="score" value="score" v-model="pac[index]" @onblur="calculation">
+							<input type="text" class="form-control" name="score" value="score" v-model="pac[index]">
 						</label>
 					</div>
 				</div>
@@ -94,7 +94,7 @@
 				<div class="col-sm-2 control-label">总分：</div>
 				<div class="col-sm-10">
 					<label >
-						100
+						{{total}}
 					</label>
 				</div>
 			</div>

@@ -13,7 +13,7 @@ public class AchievementEntity implements Serializable {
     private String name;
 
     //分数
-    private Integer score;
+    private Long score;
 
     //标准描述
     private String standardDesc;
@@ -48,11 +48,11 @@ public class AchievementEntity implements Serializable {
         this.groupId = groupId;
     }
 
-    public Integer getScore() {
+    public Long getScore() {
         return score;
     }
 
-    public void setScore(Integer score) {
+    public void setScore(Long score) {
         this.score = score;
     }
 

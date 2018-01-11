@@ -3,8 +3,10 @@ package com.wind.controller;
 import com.wind.annotation.SysLog;
 import com.wind.entity.AchievementEntity;
 import com.wind.entity.ProjectAchievementEntity;
+import com.wind.entity.ProjectAchievementItemEntity;
 import com.wind.entity.ProjectEntity;
 import com.wind.service.AchievementService;
+import com.wind.service.ProjectAchievementItemService;
 import com.wind.service.ProjectAchievementService;
 import com.wind.service.ProjectService;
 import com.wind.utils.Constant;
@@ -32,6 +34,8 @@ public class ProjectAchievementController extends AbstractController {
     private ProjectAchievementService projectAchievementService;
     @Autowired
     private AchievementService achievementService;
+    @Autowired
+    ProjectAchievementItemService projectAchievementItemService;
     /**
      * 所有组列表
      */
@@ -65,6 +69,30 @@ public class ProjectAchievementController extends AbstractController {
         List<AchievementEntity> achievementEntityList = achievementService.queryAchievementStandard(peList.get(0));
         peList.get(0).setAchievementEntityList(achievementEntityList);
         return R.ok().put("pe",peList.get(0));
+    }
+
+    /**
+     * 保存分数
+     */
+    @RequestMapping("/savescore")
+    @RequiresPermissions("setting:projectachievement:savescore")
+    public R saveScore(@RequestBody ProjectAchievementEntity projectAchievementEntity){
+        ProjectAchievementEntity pae = new ProjectAchievementEntity();
+        pae.setId(projectAchievementEntity.getId());
+        long total = 0;
+        for( AchievementEntity achievementEntity : projectAchievementEntity.getAchievementEntityList()){
+            total =total + achievementEntity.getScore();
+            ProjectAchievementItemEntity projectAchievementItemEntity = new ProjectAchievementItemEntity();
+            projectAchievementItemEntity.setGetScore(achievementEntity.getScore());
+            projectAchievementItemEntity.setAchievementId(pae.getId());
+            projectAchievementItemService.save(projectAchievementItemEntity);
+        }
+        pae.setTotalScore(total);
+        pae.setFinish(1);
+        projectAchievementService.update(pae);
+/*        List<AchievementEntity> achievementEntityList = achievementService.queryAchievementStandard(peList.get(0));
+        peList.get(0).setAchievementEntityList(achievementEntityList);*/
+        return R.ok();
     }
 
     /**
