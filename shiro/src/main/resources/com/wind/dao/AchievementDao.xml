@@ -24,6 +24,11 @@
 		</where>
 	</select>
 
+	<select id="queryAchievementStandard" resultType="com.wind.entity.AchievementEntity" parameterType="com.wind.entity.ProjectAchievementEntity">
+		SELECT su.group_id, t1.name,t1.score,t1.standard_desc FROM project_manager.sys_user su inner join work_standard t1 on t1.group_id = su.group_id where user_id = #{userId}
+
+	</select>
+
 	<insert id="save" parameterType="com.wind.entity.AchievementEntity">
 		insert into work_standard
 		(

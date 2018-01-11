@@ -52,10 +52,9 @@ var vm = new Vue({
         showList: true,
         title:null,
         paTemp:{},
-        projectAchievement:{
-            status:1,
-            projectAchievementItemList:[],
-        }
+        projectAchievementScore:{},
+        total:0,
+        pac:[]
     },
     methods: {
         query: function () {
@@ -64,10 +63,7 @@ var vm = new Vue({
         add: function(){
             vm.showList = false;
             vm.title = "新增";
-            vm.projectAchievementItemList = {userIdList:[],projectId:null};
-
-
-
+            vm.projectAchievementScore = {userIdList:[],projectId:null};
         },
         update: function () {
             var id = getSelectedRow();
@@ -76,7 +72,7 @@ var vm = new Vue({
             }
             this.getProjectAchievementContent(id);
             vm.showList = false;
-            vm.title = "修改";
+            vm.title = "打分";
         },
         del: function () {
             var projectIds = getSelectedRows();
@@ -103,8 +99,12 @@ var vm = new Vue({
             });
         },
         saveOrUpdate: function (event) {
-            var url = vm.project.id == null ? "../setting/projectachievement/save" : "../setting/projectachievement/update";
-            $.ajax({
+            //var url = vm.project.id == null ? "../setting/projectachievement/save" : "../setting/projectachievement/update";
+            for(var i=0;i<projectAchievementScore.achievementEntityList.length;i++){
+            <projectAchievementScore.achievementEntityList[i].score = vm.pac[i];
+            }
+            alert( JSON.stringify(vm.pac));
+            /*$.ajax({
                 type: "POST",
                 url: url,
                 contentType: "application/json",
@@ -118,7 +118,7 @@ var vm = new Vue({
                         alert(r.msg);
                     }
                 }
-            });
+            });*/
         },
         getProject: function(projectId){
             $.get("../setting/projectachievement/info/"+projectId, function(r){
@@ -134,8 +134,7 @@ var vm = new Vue({
                 contentType: "application/json",
                 data: JSON.stringify(vm.paTemp),
                 success: function(r){
-                    alert(JSON.stringify(r.pe));
-                    vm.projectAchievement = r.pe;
+                    vm.projectAchievementScore = r.pe;
                 }
             });
         },
@@ -146,6 +145,9 @@ var vm = new Vue({
                 postData:{'username': vm.q.username},
                 page:page
             }).trigger("reloadGrid");
+        },
+        calculation: function (event) {
+            //vm.total =
         }
     }
 });

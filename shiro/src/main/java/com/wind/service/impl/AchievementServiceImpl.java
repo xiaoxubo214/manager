@@ -2,6 +2,7 @@ package com.wind.service.impl;
 
 import com.wind.dao.AchievementDao;
 import com.wind.entity.AchievementEntity;
+import com.wind.entity.ProjectAchievementEntity;
 import com.wind.service.AchievementService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -17,6 +18,11 @@ public class AchievementServiceImpl implements AchievementService {
     @Override
     public List<AchievementEntity> queryList(Map<String, Object> map) {
         return achievementDao.queryList(map);
+    }
+
+    @Override
+    public List<AchievementEntity> queryAchievementStandard(ProjectAchievementEntity projectAchievementEntity) {
+        return achievementDao.queryAchievementStandard(projectAchievementEntity);
     }
 
     @Override

@@ -19,7 +19,7 @@
 	</select>
 
 	<select id="queryList" resultType="com.wind.entity.ProjectAchievementEntity">
-		select t1.id,t1.name work_name,t1.finish,t1.start_time,t1.end_time,t2.project_name,t2.owner_id,t2.name owner_name from
+		select t1.id,t1.user_id,t1.name work_name,t1.finish,t1.start_time,t1.end_time,t2.project_name,t2.owner_id,t2.name owner_name from
 		(
 		select wa.id,wa.user_id,wa.finish,wa.project_id,wa.start_time,wa.end_time,su1.name
 		from work_achievement wa
@@ -36,6 +36,9 @@
 			<if test="ownerId != null">
 				and `owner_id` like concat('%',#{ownerId},'%')
 			</if>
+			<if test="id != null">
+				and t1.id = #{id}
+			</if>
 		</where>
 		<choose>
 			<when test="sidx != null and sidx.trim() != ''">
@@ -49,8 +52,6 @@
 			limit #{offset}, #{limit}
 		</if>
 	</select>
-
-
 	
  	<select id="queryTotal" resultType="int">
 		select count(*) from work_achievement

@@ -1,8 +1,10 @@
 package com.wind.controller;
 
 import com.wind.annotation.SysLog;
+import com.wind.entity.AchievementEntity;
 import com.wind.entity.ProjectAchievementEntity;
 import com.wind.entity.ProjectEntity;
+import com.wind.service.AchievementService;
 import com.wind.service.ProjectAchievementService;
 import com.wind.service.ProjectService;
 import com.wind.utils.Constant;
@@ -18,6 +20,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -27,6 +30,8 @@ import java.util.Map;
 public class ProjectAchievementController extends AbstractController {
     @Autowired
     private ProjectAchievementService projectAchievementService;
+    @Autowired
+    private AchievementService achievementService;
     /**
      * 所有组列表
      */
@@ -54,8 +59,12 @@ public class ProjectAchievementController extends AbstractController {
     @RequestMapping("/content")
     @RequiresPermissions("setting:projectachievement:content")
     public R content(@RequestBody ProjectAchievementEntity projectAchievementEntity){
-        ProjectAchievementEntity pe = projectAchievementService.queryObject(projectAchievementEntity.getId());
-        return R.ok().put("pe",pe);
+        Map map = new HashMap();
+        map.put("id",projectAchievementEntity.getId());
+        List<ProjectAchievementEntity> peList = projectAchievementService.queryList(map);
+        List<AchievementEntity> achievementEntityList = achievementService.queryAchievementStandard(peList.get(0));
+        peList.get(0).setAchievementEntityList(achievementEntityList);
+        return R.ok().put("pe",peList.get(0));
     }
 
     /**
