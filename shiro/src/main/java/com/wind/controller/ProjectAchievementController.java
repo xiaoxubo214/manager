@@ -4,11 +4,9 @@ import com.wind.annotation.SysLog;
 import com.wind.entity.AchievementEntity;
 import com.wind.entity.ProjectAchievementEntity;
 import com.wind.entity.ProjectAchievementItemEntity;
-import com.wind.entity.ProjectEntity;
 import com.wind.service.AchievementService;
 import com.wind.service.ProjectAchievementItemService;
 import com.wind.service.ProjectAchievementService;
-import com.wind.service.ProjectService;
 import com.wind.utils.Constant;
 import com.wind.utils.PageUtils;
 import com.wind.utils.Query;
@@ -45,6 +43,27 @@ public class ProjectAchievementController extends AbstractController {
         //只有超级管理员，才能查看所有管理员列表
         if(getUserId() != Constant.SUPER_ADMIN){
             params.put("ownerId", getUserId());
+        }
+
+        //查询列表数据
+        Query query = new Query(params);
+        List<ProjectAchievementEntity> groupList = projectAchievementService.queryList(query);
+        int total = projectAchievementService.queryTotal(query);
+
+        PageUtils pageUtil = new PageUtils(groupList, total, query.getLimit(), query.getPage());
+
+        return R.ok().put("page", pageUtil);
+    }
+
+    /**
+     * 所有组列表
+     */
+    @RequestMapping("/listbyuser")
+    @RequiresPermissions("setting:projectachievement:listbyuser")
+    public R listByUser(@RequestParam Map<String, Object> params){
+        //只有超级管理员，才能查看所有管理员列表
+        if(getUserId() != Constant.SUPER_ADMIN){
+            params.put("userId", getUserId());
         }
 
         //查询列表数据
