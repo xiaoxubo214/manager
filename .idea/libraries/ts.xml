@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="ts">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/gen/libs/ts.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+    <jarDirectory url="jar://$PROJECT_DIR$/gen/libs/ts.jar!/" recursive="false" />
+  </library>
+</component>
