@@ -8,7 +8,7 @@ import javax.persistence.MappedSuperclass;
 import javax.persistence.Transient;
 import javax.persistence.Version;
 
-import com.ts.core.annotation.BeanProperty;
+import com.wind.annotation.BeanProperty;
 import org.hibernate.annotations.GenericGenerator;
 
 @MappedSuperclass
