@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="41efad8c-4260-4151-a363-2b818488b01e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common/src/main/java/com/wind/bean/BaseBean.java" afterPath="$PROJECT_DIR$/common/src/main/java/com/wind/bean/BaseBean.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/common/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/db.sql" afterPath="$PROJECT_DIR$/doc/db.sql" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/common/src/main/java/com/wind/annotation/BaseProperty.java" afterPath="$PROJECT_DIR$/common/src/main/java/com/wind/annotation/BeanProperty.java" />
     </list>
     <ignored path="$PROJECT_DIR$/web/target/" />
     <ignored path="$PROJECT_DIR$/shiro/target/" />
@@ -93,8 +89,8 @@
       <file leaf-file-name="db.sql" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/doc/db.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="185" column="0" lean-forward="true" selection-start-line="185" selection-start-column="0" selection-end-line="242" selection-end-column="0" />
+            <state relative-caret-position="553">
+              <caret line="485" column="128" lean-forward="false" selection-start-line="485" selection-start-column="128" selection-end-line="485" selection-end-column="128" />
               <folding />
             </state>
           </provider>
@@ -1004,12 +1000,12 @@
       <workItem from="1515721236680" duration="6874000" />
       <workItem from="1515980718236" duration="1657000" />
       <workItem from="1515982494967" duration="571000" />
-      <workItem from="1515983103140" duration="7237000" />
+      <workItem from="1515983103140" duration="8921000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="197302000" />
+    <option name="totallyTimeSpent" value="198986000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1518,8 +1514,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/doc/db.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="185" column="0" lean-forward="true" selection-start-line="185" selection-start-column="0" selection-end-line="242" selection-end-column="0" />
+        <state relative-caret-position="553">
+          <caret line="485" column="128" lean-forward="false" selection-start-line="485" selection-start-column="128" selection-end-line="485" selection-end-column="128" />
           <folding />
         </state>
       </provider>
