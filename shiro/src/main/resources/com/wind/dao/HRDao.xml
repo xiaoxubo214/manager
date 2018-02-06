@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.wind.dao.HRDao">
+
+	<select id="queryList" resultType="com.wind.entity.HREntity">
+		SELECT
+		hls.contract_detail_id contract_detail_id,
+		hd.name name,
+		hm.name hmName,
+		hmm.name hmmName,
+		hc.subject subject,
+		hc.course course,
+		hls.lesson_serial lesson_serial,
+		hls.date date,
+		hls.lesson_price lesson_price,
+		hls.lesson_cnt_charged lesson_cnt_charged,
+		hls.lesson_range lesson_range,
+		hls.status_id status_id ,
+		hls.student_rating student_rating ,
+		hls.step step,
+		hls.student_comment student_comment,
+		hls.lesson_content_checked lesson_content_checked
+		FROM
+		ht_lesson_student hls
+		LEFT JOIN ht_department hd ON hd.id=hls.department_id
+		LEFT JOIN ht_member hm ON hm.id=hls.teacher_id
+		LEFT JOIN ht_member hmm ON hmm.id=hls.student_id
+		LEFT JOIN ht_course hc ON hc.id=hls.course_id
+		LEFT JOIN ht_status hs ON hs.id=hls.status_id
+		LEFT JOIN ht_lesson_salary_rate hlr ON hlr.lesson_range=hls.lesson_range and hc.subject_id =hlr.subject_id
+		<where>
+			DATE_FORMAT(hls.date,'%Y-%m')='2017-11' AND hls.step in(0,1)
+		</where>
+		ORDER BY date DESC
+		<if test="offset != null and limit != null">
+			limit #{offset}, #{limit}
+		</if>
+	</select>
+
+	<select id="queryTotal" resultType="int">
+		select count(*) from ht_lesson_student
+		WHERE
+		DATE_FORMAT(date,'%Y-%m')='2017-11' AND step in(0,1)
+	</select>
+
+</mapper>

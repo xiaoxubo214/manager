@@ -18,6 +18,7 @@ E:\code\manager\common\src\main\java\com\wind\xss\XssHttpServletRequestWrapper.j
 E:\code\manager\common\src\main\java\com\wind\validator\group\AliyunGroup.java
 E:\code\manager\common\src\main\java\com\wind\utils\R.java
 E:\code\manager\common\src\main\java\com\wind\oss\CloudStorageService.java
+E:\code\manager\common\src\main\java\com\wind\annotation\BeanProperty.java
 E:\code\manager\common\src\main\java\com\wind\service\SysLogService.java
 E:\code\manager\common\src\main\java\com\wind\dao\SysConfigDao.java
 E:\code\manager\common\src\main\java\com\wind\utils\SpringContextUtils.java
@@ -28,6 +29,7 @@ E:\code\manager\common\src\main\java\com\wind\entity\SysConfigEntity.java
 E:\code\manager\common\src\main\java\com\wind\xss\SQLFilter.java
 E:\code\manager\common\src\main\java\com\wind\utils\Constant.java
 E:\code\manager\common\src\main\java\com\wind\validator\group\Group.java
+E:\code\manager\common\src\main\java\com\wind\bean\BaseBean.java
 E:\code\manager\common\src\main\java\com\wind\service\impl\SysConfigServiceImpl.java
 E:\code\manager\common\src\main\java\com\wind\utils\IPUtils.java
 E:\code\manager\common\src\main\java\com\wind\utils\RRException.java
